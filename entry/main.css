@@ -1,0 +1,9 @@
+
+body {
+  margin: 0;
+  font-family: Hind, Helvetica, Arial, sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}

@@ -9,7 +9,7 @@
 
 (def base-info
   {:title "shadow-cljs guide page",
-   :icon "http://cdn.tiye.me/logo/mvc-works.png",
+   :icon "http://cdn.tiye.me/logo/shadow-cljs.png",
    :ssr nil,
    :inline-html nil,
    :inline-styles [(slurp "./entry/main.css")]})

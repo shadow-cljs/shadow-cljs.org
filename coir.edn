@@ -279,7 +279,7 @@
                 :type :expr, :id "BkbowJXff", :by "root", :at 1513449368668
                 :data {
                  "T" {:type :leaf, :text ":padding", :id "BkbowJXffleaf", :by "root", :at 1513449370514}
-                 "j" {:type :leaf, :text "|0 16px", :id "Bkmsw1XMM", :by "root", :at 1513449372279}
+                 "j" {:type :leaf, :text "|8px 16px", :id "Bkmsw1XMM", :by "root", :at 1514997299083}
                 }
                }
               }
@@ -351,7 +351,7 @@
                 :type :expr, :id "Hyx8cPkmMf", :by "root", :at 1513449358032
                 :data {
                  "T" {:type :leaf, :text ":padding", :id "Hyx8cPkmMfleaf", :by "root", :at 1513449359617}
-                 "j" {:type :leaf, :text "|0 16px", :id "Hked9PkmGG", :by "root", :at 1513449363496}
+                 "j" {:type :leaf, :text "|0 0px", :id "Hked9PkmGG", :by "root", :at 1514997279762}
                 }
                }
               }
@@ -444,7 +444,7 @@
             :type :expr, :id "r1NuPazfz", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446798722}
+             "j" {:type :leaf, :text "|shadow-cljs can be installed from npm, and being used as command-line tool. You may need JVM installed, but no need to configure JVM environment or Clojure environment before you can compile ClojureScript. shadow-cljs handles configurations for you.", :id "rJidPTzMf", :by "root", :at 1514996765154}
             }
            }
            "v" {
@@ -477,7 +477,7 @@
             :type :expr, :id "rklltDazzM", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446803323}
+             "j" {:type :leaf, :text "|shadow-cljs uses a config file called shadow-cljs.edn . It's just a config file you can add things declaratively, instead of writing scripts to wind up plugins.", :id "rJidPTzMf", :by "root", :at 1514996877699}
             }
            }
            "x" {
@@ -503,14 +503,14 @@
             :type :expr, :id "S18Qf4zMM", :by "root", :at 1513402807734
             :data {
              "T" {:type :leaf, :text "render-feature", :id "HyeaWVzzfleaf", :by "root", :at 1513402810423}
-             "j" {:type :leaf, :text "|Import JavaScript code from library", :id "B1fAb4zGz", :by "root", :at 1513442461629}
+             "j" {:type :leaf, :text "|Import JavaScript code from npm", :id "B1fAb4zGz", :by "root", :at 1514996894288}
             }
            }
            "v" {
             :type :expr, :id "rklltDazzM", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446804716}
+             "j" {:type :leaf, :text "|In shadow-cljs, importing npm package is becoming trivial.", :id "rJidPTzMf", :by "root", :at 1514996930097}
             }
            }
            "x" {
@@ -543,7 +543,7 @@
             :type :expr, :id "rklltDazzM", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446806591}
+             "j" {:type :leaf, :text "|Roughly same hot code swapping support like in lein-figwheel. Code are compiled incrementally, error messages are prettified.", :id "rJidPTzMf", :by "root", :at 1514997025646}
             }
            }
            "x" {
@@ -576,7 +576,7 @@
             :type :expr, :id "rklltDazzM", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446808531}
+             "j" {:type :leaf, :text "|By setting in :module-hash-names field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile manifest.edn file can be emitted for indexing js files in HTML.", :id "rJidPTzMf", :by "root", :at 1514997158373}
             }
            }
            "x" {
@@ -609,7 +609,7 @@
             :type :expr, :id "rklltDazzM", :by "root", :at 1513441131784
             :data {
              "T" {:type :leaf, :text "render-description", :id "r1NuPazfzleaf", :by "root", :at 1513441138403}
-             "j" {:type :leaf, :text "|well...", :id "rJidPTzMf", :by "root", :at 1513446808531}
+             "j" {:type :leaf, :text "|shadow-cljs supports simple dynamic import provided by Google Closure Compiler. So you may split code into seperated bundles and load when needed.", :id "rJidPTzMf", :by "root", :at 1514997227230}
             }
            }
            "x" {
@@ -849,7 +849,7 @@
             :type :expr, :id "HkKf6HnXzMM", :by "root", :at 1513401412900
             :data {
              "T" {:type :leaf, :text "<>", :id "By5MpB37GMG", :by "root", :at 1513401412900}
-             "j" {:type :leaf, :text "|shadow-cljs(Site under construction)", :id "BysG6Snmzff", :by "root", :at 1513403368505}
+             "j" {:type :leaf, :text "|shadow-cljs(WIP)", :id "BysG6Snmzff", :by "root", :at 1514997317931}
             }
            }
           }

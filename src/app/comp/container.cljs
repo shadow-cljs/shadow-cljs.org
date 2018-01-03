@@ -9,51 +9,13 @@
             [app.theme :as theme]
             [app.style :as style]))
 
-(defn render-header []
-  (div
-   {:style (merge
-            ui/row-parted
-            {:background-color theme/dark, :color :white, :height 60, :padding "0 16px"})}
-   (div
-    {:style ui/row-center}
-    (div
-     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-s.png)",
-              :width 20,
-              :height 40,
-              :background-size :cover}})
-    (=< 16 nil)
-    (<> "shadow-cljs(Site under construction)"))
-   (div
-    {}
-    (a
-     {:href "https://github.com/thheller/shadow-cljs", :style {:color :white}}
-     (<> "GitHub")))))
+(defn render-description [description]
+  (div {:style {:font-size 16, :padding "0 16px"}} (<> description)))
 
-(defn render-visual []
+(defn render-feature [title]
   (div
-   {:style (merge ui/center {:background-color theme/dark, :height 600, :color :white})}
-   (div
-    {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs.png)",
-             :background-size "cover",
-             :width 320,
-             :height 320}})
-   (=< nil 32)
-   (div
-    {:style {:font-size 20, :padding "0 16px"}}
-    (<>
-     "shadow-cljs provides everything you need to compile your ClojureScript code with a focus on simplicity and ease of use."))
-   (=< nil 32)
-   (div
-    {:style ui/row-center}
-    (a
-     {:href "https://github.com/thheller/shadow-cljs/wiki/ClojureScript-for-the-browser",
-      :target "_blank"}
-     (button {:style style/button} (<> "Wiki")))
-    (=< 32 nil)
-    (a
-     {:href "https://medium.com/@jiyinyiyong/a-beginner-guide-to-compile-clojurescript-with-shadow-cljs-26369190b786",
-      :target "_blank"}
-     (button {:style style/button} (<> "Guide"))))))
+   {:style {:font-size 24, :line-height "40px", :margin-top 40, :padding "0 16px"}}
+   (<> title)))
 
 (defn render-snippet [code]
   (pre
@@ -68,14 +30,6 @@
             :max-width "100%",
             :overflow :auto},
     :inner-text code}))
-
-(defn render-feature [title]
-  (div
-   {:style {:font-size 24, :line-height "40px", :margin-top 40, :padding "0 16px"}}
-   (<> title)))
-
-(defn render-description [description]
-  (div {:style {:font-size 16, :padding "0 16px"}} (<> description)))
 
 (defn render-features []
   (div
@@ -125,6 +79,52 @@
             :color theme/green-dark,
             :padding 16}}
    (<> "This page is powered by shadow-cljs and Respo.")))
+
+(defn render-header []
+  (div
+   {:style (merge
+            ui/row-parted
+            {:background-color theme/dark, :color :white, :height 60, :padding "0 16px"})}
+   (div
+    {:style ui/row-center}
+    (div
+     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-s.png)",
+              :width 20,
+              :height 40,
+              :background-size :cover}})
+    (=< 16 nil)
+    (<> "shadow-cljs(Site under construction)"))
+   (div
+    {}
+    (a
+     {:href "https://github.com/thheller/shadow-cljs", :style {:color :white}}
+     (<> "GitHub")))))
+
+(defn render-visual []
+  (div
+   {:style (merge ui/center {:background-color theme/dark, :height 600, :color :white})}
+   (div
+    {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs.png)",
+             :background-size "cover",
+             :width 320,
+             :height 320}})
+   (=< nil 32)
+   (div
+    {:style {:font-size 20, :padding "0 16px"}}
+    (<>
+     "shadow-cljs provides everything you need to compile your ClojureScript code with a focus on simplicity and ease of use."))
+   (=< nil 32)
+   (div
+    {:style ui/row-center}
+    (a
+     {:href "https://github.com/thheller/shadow-cljs/wiki/ClojureScript-for-the-browser",
+      :target "_blank"}
+     (button {:style style/button} (<> "Wiki")))
+    (=< 32 nil)
+    (a
+     {:href "https://medium.com/@jiyinyiyong/a-beginner-guide-to-compile-clojurescript-with-shadow-cljs-26369190b786",
+      :target "_blank"}
+     (button {:style style/button} (<> "Guide"))))))
 
 (defcomp
  comp-container

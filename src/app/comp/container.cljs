@@ -94,7 +94,7 @@
     {:style ui/row-center}
     (div
      {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-s.png)",
-              :width 20,
+              :width 40,
               :height 40,
               :background-size :cover}})
     (=< 16 nil)

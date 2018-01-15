@@ -90,15 +90,7 @@
    {:style (merge
             ui/row-parted
             {:background-color theme/dark, :color :white, :height 60, :padding "0 16px"})}
-   (div
-    {:style ui/row-center}
-    (div
-     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-s.png)",
-              :width 40,
-              :height 40,
-              :background-size :cover}})
-    (=< 16 nil)
-    (<> "shadow-cljs(WIP)"))
+   (div {:style ui/row-center} (<> "shadow-cljs: ClojureScript compilation made easy"))
    (div
     {}
     (a
@@ -122,6 +114,14 @@
    (div
     {:style ui/row-center}
     (a
+     {:href "https://shadow-cljs.github.io/docs/UsersGuide.html", :target "_blank"}
+     (button {:style style/button} (<> "User Guide")))
+    (=< 32 nil)
+    (a
+     {:href "https://code.thheller.com/", :target "_blank"}
+     (button {:style style/button} (<> "Blogs")))
+    (=< 32 nil)
+    (a
      {:href "https://github.com/thheller/shadow-cljs/wiki/ClojureScript-for-the-browser",
       :target "_blank"}
      (button {:style style/button} (<> "Wiki")))
@@ -129,7 +129,7 @@
     (a
      {:href "https://medium.com/@jiyinyiyong/a-beginner-guide-to-compile-clojurescript-with-shadow-cljs-26369190b786",
       :target "_blank"}
-     (button {:style style/button} (<> "Guide"))))))
+     (button {:style style/button} (<> "Beginner"))))))
 
 (defcomp
  comp-container

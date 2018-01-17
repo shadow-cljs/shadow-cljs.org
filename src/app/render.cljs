@@ -8,11 +8,11 @@
             [cljs.reader :refer [read-string]]))
 
 (def base-info
-  {:title "shadow-cljs guide page",
+  {:title "shadow-cljs provides everything you need to compile your ClojureScript code with a focus on simplicity and ease of use.",
    :icon "http://cdn.tiye.me/logo/shadow-cljs.png",
    :ssr nil,
    :inline-html nil,
-   :inline-styles [(slurp "./entry/main.css")]})
+   :inline-styles [(slurp "./entry/monokai-sublime.css") (slurp "./entry/main.css")]})
 
 (defn dev-page []
   (make-page

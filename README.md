@@ -1,8 +1,8 @@
 
-[WIP]shadow-cljs.org
+shadow-cljs.org
 ----
 
-> Guide page for new users.
+> Home page for [shadow-cljs](github.com/thheller/shadow-cljs)
 
 http://shadow-cljs.org
 
@@ -17,6 +17,8 @@ yarn http-server dist
 ### Workflow
 
 Workflow https://github.com/mvc-works/coworkflow
+
+> Clojure code written with [Cumulo Editor](https://github.com/Cirru/cumulo-editor/).
 
 ### License
 

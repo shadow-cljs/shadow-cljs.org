@@ -10,5 +10,7 @@
     :border-radius "24px",
     :font-size 20,
     :font-family "Josefin Sans, Helvetica, Arial, sans-serif",
-    :padding "0 16px",
-    :background-color theme/green}))
+    :padding "0 32px",
+    :background-color :transparent,
+    :border (str "1px solid " theme/green),
+    :color theme/green}))

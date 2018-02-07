@@ -16,9 +16,9 @@ yarn http-server dist
 
 ### Workflow
 
-Workflow https://github.com/mvc-works/coworkflow
+Workflow https://github.com/mvc-works/calcit-workflow
 
-> Clojure code written with [Cumulo Editor](https://github.com/Cirru/cumulo-editor/).
+> Clojure code written with [Calcit Editor](https://github.com/Cirru/calcit-editor/).
 
 ### License
 

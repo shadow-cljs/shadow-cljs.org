@@ -1,7 +1,7 @@
 
 (ns app.comp.container
   (:require [hsl.core :refer [hsl]]
-            [respo-ui.style :as ui]
+            [respo-ui.core :as ui]
             [respo.macros :refer [defcomp cursor-> <> div button textarea pre a span]]
             [verbosely.core :refer [verbosely!]]
             [respo.comp.space :refer [=<]]
@@ -81,7 +81,7 @@
      "shadow-cljs supports simple dynamic import provided by Google Closure Compiler. So you may split code into seperated bundles and load when needed.")
     (render-snippet
      "clojure"
-     "(ns app.extra)\n\n(defn async-code! []\n  (println \"async code!\"))\n\n; another file\n\n(ns app.main\n  (:require [shadow.loader :as loader]))\n\n(defn on-load []\n  ((resolve 'extra/async-code!))\n\n(defn main! []\n  (loader/with-module \"extra\" on-load))\n"))))
+     "(ns app.extra)\n\n(defn async-code! []\n  (println \"async code!\"))\n\n; another file\n\n(ns app.main\n  (:require [shadow.loader :as loader]))\n\n(defn on-load []\n  ((resolve 'app.extra/async-code!))\n\n(defn main! []\n  (loader/with-module \"extra\" on-load))\n"))))
 
 (defn render-footer []
   (div

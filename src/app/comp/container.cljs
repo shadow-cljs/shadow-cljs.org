@@ -104,16 +104,15 @@
    (div {:style ui/row-center})
    (div
     {}
-    (a
-     {:href "https://github.com/thheller/shadow-cljs/wiki/ClojureScript-for-the-browser",
-      :style {:color :white}}
-     (<> "Wiki"))
-    (=< 32 nil)
     (a {:href "https://code.thheller.com/", :style {:color :white}} (<> "Blogs"))
     (=< 32 nil)
     (a
      {:href "https://github.com/thheller/shadow-cljs", :style {:color :white}}
-     (<> "GitHub")))))
+     (<> "GitHub"))
+    (=< 32 nil)
+    (a
+     {:href "|https://clojurians.slack.com/messages/C6N245JGG/", :style {:color :white}}
+     (<> "Slack")))))
 
 (defn render-visual []
   (div
@@ -149,15 +148,15 @@
      (button {:style style/button} (<> "User Guide")))
     (=< 32 nil)
     (a
-     {:href "https://clojurians.slack.com/messages/C6N245JGG/", :target "_blank"}
-     (button {:style style/button} (<> "Join Slack"))))))
+     {:href "https://clojureverse.org/c/projects/shadow-cljs", :target "_blank"}
+     (button {:style style/button} (<> "Forum"))))))
 
 (defcomp
  comp-container
  (reel)
  (let [store (:store reel), states (:states store)]
    (div
-    {:style {}}
+    {:style {:background-color :white}}
     (render-header)
     (render-visual)
     (render-features)

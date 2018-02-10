@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Hind, Helvetica, Arial, sans-serif;
+  font-display: optional;
   background-color: rgb(12, 43, 82);
 }
 

@@ -10,7 +10,7 @@ http://shadow-cljs.org
 
 ```bash
 yarn
-yarn build
+yarn shadow-cljs clj-run build.main/build-local
 yarn http-server dist
 ```
 

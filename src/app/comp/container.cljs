@@ -2,7 +2,7 @@
 (ns app.comp.container
   (:require [hsl.core :refer [hsl]]
             [respo-ui.core :as ui]
-            [respo.macros :refer [defcomp cursor-> <> div button textarea pre a span]]
+            [respo.macros :refer [defcomp cursor-> <> div button textarea pre a span img]]
             [verbosely.core :refer [verbosely!]]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]
@@ -128,7 +128,10 @@
              :padding "0 16px",
              :font-family "Hind, Helvetica, sans-serif",
              :font-weight 100}}
-    (<> "ClojureScript compilation made easy!"))
+    (<> "ClojureScript compilation made easy!")
+    (=< 8 nil)
+    (img
+     {:style {:vertical-align :middle}, :src "https://img.shields.io/npm/v/shadow-cljs.svg"}))
    (=< nil 32)
    (div
     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs.png)",

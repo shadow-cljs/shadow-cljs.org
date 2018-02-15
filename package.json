@@ -4,18 +4,9 @@
   "description": "shadow-cljs site",
   "main": "index.js",
   "scripts": {
-    "cdn": "rsync -avr --progress dist/* tiye.me:cdn/shadow-cljs-org",
-    "tiye": "rsync -avr --progress dist/{index.html,manifest.json} tiye.me:repo/shadow-cljs/shadow-cljs.org/",
-    "upload": "yarn cdn && yarn tiye",
-    "release": "shadow-cljs release browser",
     "watch": "shadow-cljs watch browser",
-    "compile-ssr": "shadow-cljs compile ssr",
-    "html-dev": "env=dev node target/ssr.js && cp entry/manifest.json target/",
-    "html": "node target/ssr.js && cp entry/manifest.json dist/",
-    "index.html": "yarn compile-ssr && yarn html-dev",
-    "del": "rm -rf dist/*",
     "serve": "http-server dist -s",
-    "build": "yarn del && yarn release && yarn compile-ssr && yarn html"
+    "repl": "rlwrap shadow-cljs clj-repl"
   },
   "repository": {
     "type": "git",
@@ -25,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "shadow-cljs": "2.1.4"
+    "shadow-cljs": "2.1.11"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",

@@ -111,8 +111,12 @@
      (<> "GitHub"))
     (=< 32 nil)
     (a
-     {:href "|https://clojurians.slack.com/messages/C6N245JGG/", :style {:color :white}}
-     (<> "Slack")))))
+     {:href "https://clojurians.slack.com/messages/C6N245JGG/", :style {:color :white}}
+     (<> "Slack"))
+    (=< 32 nil)
+    (a
+     {:href "https://github.com/thheller/shadow-cljs/releases", :style {:color :white}}
+     (<> "Releases")))))
 
 (defn render-visual []
   (div

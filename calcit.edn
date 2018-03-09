@@ -983,7 +983,7 @@
                 :type :expr, :by "root", :at 1518248195943, :id "Hy2-W73IM"
                 :data {
                  "T" {:type :leaf, :by "root", :at 1518248197338, :text ":href", :id "Hy2-W73IMleaf"}
-                 "j" {:type :leaf, :by "root", :at 1518248199085, :text "||https://clojurians.slack.com/messages/C6N245JGG/", :id "Sy0WZ7nLz"}
+                 "j" {:type :leaf, :by "root", :at 1520566183078, :text "|https://clojurians.slack.com/messages/C6N245JGG/", :id "Sy0WZ7nLz"}
                 }
                }
                "r" {
@@ -1012,6 +1012,59 @@
               :data {
                "T" {:type :leaf, :text "<>", :id "BJyVaS27GzM", :by "root", :at 1513401412900}
                "j" {:type :leaf, :text "|Slack", :id "HyxEpB3mGGG", :by "root", :at 1518248203993}
+              }
+             }
+            }
+           }
+           "y" {
+            :type :expr, :by "rJG4IHzWf", :at 1516207187787, :id "S15q1KyYG"
+            :data {
+             "T" {:type :leaf, :by "rJG4IHzWf", :at 1516207189699, :text "=<", :id "HJn83gaVzleaf"}
+             "j" {:type :leaf, :by "rJG4IHzWf", :at 1516207252640, :text "32", :id "rJ1v2epEf"}
+             "r" {:type :leaf, :by "rJG4IHzWf", :at 1516207191683, :text "nil", :id "SJGyv2epEG"}
+            }
+           }
+           "yT" {
+            :type :expr, :id "rJpqktJFz", :by "root", :at 1513401412900
+            :data {
+             "T" {:type :leaf, :text "a", :id "ryWQar3mfzz", :by "root", :at 1513401412900}
+             "j" {
+              :type :expr, :id "SJz76rn7GzM", :by "root", :at 1513401412900
+              :data {
+               "T" {:type :leaf, :text "{}", :id "SymQaShQfMG", :by "root", :at 1513401412900}
+               "n" {
+                :type :expr, :by "root", :at 1518248195943, :id "Hy2-W73IM"
+                :data {
+                 "T" {:type :leaf, :by "root", :at 1518248197338, :text ":href", :id "Hy2-W73IMleaf"}
+                 "j" {:type :leaf, :by "root", :at 1520566180606, :text "|https://github.com/thheller/shadow-cljs/releases", :id "Sy0WZ7nLz"}
+                }
+               }
+               "r" {
+                :type :expr, :id "S1PmpBhXzfM", :by "root", :at 1513401412900
+                :data {
+                 "T" {:type :leaf, :text ":style", :id "By_mTSnmzMf", :by "root", :at 1513401412900}
+                 "j" {
+                  :type :expr, :id "S1F7TSnmGff", :by "root", :at 1513401412900
+                  :data {
+                   "T" {:type :leaf, :text "{}", :id "HkqmTrhQGMG", :by "root", :at 1513401412900}
+                   "j" {
+                    :type :expr, :id "Bks7TH37GMf", :by "root", :at 1513401412900
+                    :data {
+                     "T" {:type :leaf, :text ":color", :id "S1nXaBhQfMz", :by "root", :at 1513401412900}
+                     "j" {:type :leaf, :text ":white", :id "SyTQpB2QGMM", :by "root", :at 1513401412900}
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+             "r" {
+              :type :expr, :id "rkCXpr2QfMz", :by "root", :at 1513401412900
+              :data {
+               "T" {:type :leaf, :text "<>", :id "BJyVaS27GzM", :by "root", :at 1513401412900}
+               "j" {:type :leaf, :text "|Releases", :id "HyxEpB3mGGG", :by "root", :at 1520566223887}
               }
              }
             }
@@ -2240,7 +2293,6 @@
                 :type :expr, :id "H1l8go_FqTHZ", :by nil, :at 1499755354983
                 :data {
                  "T" {:type :leaf, :text "[]", :id "SJ-Lgj_t5aS-", :by "root", :at 1499755354983}
-                 "r" {:type :leaf, :text "|/lib.js", :id "BJ7Ils_Y5arb", :by "root", :at 1518247805779}
                  "v" {:type :leaf, :text "|/main.js", :id "HJNUxo_tcpSb", :by "root", :at 1518247804256}
                 }
                }

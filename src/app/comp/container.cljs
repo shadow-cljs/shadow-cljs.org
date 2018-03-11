@@ -2,86 +2,25 @@
 (ns app.comp.container
   (:require [hsl.core :refer [hsl]]
             [respo-ui.core :as ui]
-            [respo.macros :refer [defcomp cursor-> <> div button textarea pre a span img]]
+            [respo.macros
+             :refer
+             [defcomp cursor-> <> div button textarea pre a span img style]]
             [verbosely.core :refer [verbosely!]]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]
             [app.theme :as theme]
             [app.style :as style]
+            [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]))
-
-(defn render-description [description]
-  (div {:style {:font-size 16, :padding "8px 16px"}} (<> description)))
-
-(defn render-feature [title]
-  (div
-   {:style {:font-size 24, :line-height "40px", :margin-top 40, :padding "0 0px"}}
-   (<> title)))
-
-(defn render-snippet [lang code]
-  (pre
-   {:style {:margin 0,
-            :padding 16,
-            :background-color theme/dark,
-            :color "white",
-            :font-size 14,
-            :font-family "Source Code Pro, Ubuntu Mono, Menlo, monospace",
-            :line-height "24px",
-            :width 600,
-            :max-width "100%",
-            :overflow :auto},
-    :innerHTML (.-value (.highlight hljs lang code))}))
 
 (defn render-features []
   (div
    {:style {:margin "auto", :width 600, :max-width "100%"}}
-   (div
-    {}
-    (render-feature "Easy to install")
-    (render-description
-     "shadow-cljs can be installed from npm, and being used as command-line tool. You may need JVM installed, but no need to configure JVM environment or Clojure environment before you can compile ClojureScript. shadow-cljs handles configurations for you.")
-    (render-snippet
-     "bash"
-     "npm install -g shadow-cljs\n# or with yarn\nyarn global add shadow-cljs"))
-   (div
-    {}
-    (render-feature "Easy to configure")
-    (render-description
-     "shadow-cljs uses a config file called shadow-cljs.edn . It's just a config file you can add things declaratively, instead of writing scripts to wind up plugins.")
-    (render-snippet
-     "clojure"
-     "{:dependencies [[reagent \"0.8.0-alpha2\"]]\n\n :source-paths [\"src\"]\n\n :builds {:app {:target :browser\n                :output-dir \"public/js\"\n                :asset-path \"/js\"\n                :modules {:main {:entries [my.app]}}}}}\n"))
-   (div
-    {}
-    (render-feature "Import JavaScript code from npm")
-    (render-description "In shadow-cljs, importing npm package is becoming trivial.")
-    (render-snippet
-     "clojure"
-     "(ns app.main\n  (:require [\"md5\" :as md5]\n            [\"fs\" :as fs]))\n\n(println (md5 \"text\"))\n\n(fs/readFileSync \"deps.den\" \"utf8\")\n"))
-   (div
-    {}
-    (render-feature "Hot code swapping")
-    (render-description
-     "Roughly same hot code swapping support like in lein-figwheel. Code are compiled incrementally, error messages are prettified.")
-    (render-snippet
-     "clojure"
-     "{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n\n                    :devtools {:after-load app.main/reload!\n                               :preloads [shadow.cljs.devtools.client.hud]\n                               :http-root \"target\"\n                               :http-port 8080}}}}\n"))
-   (div
-    {}
-    (render-feature "Long term caching")
-    (render-description
-     "By setting in :module-hash-names field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile manifest.edn file can be emitted for indexing js files in HTML.")
-    (render-snippet
-     "clojure"
-     "{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n                    \n                    :release {:output-dir \"dist/\"\n                              :module-hash-names 8\n                              :build-options {:manifest-name \"assets.edn\"}}}}}\n"))
-   (div
-    {}
-    (render-feature "Dynamic code loading")
-    (render-description
-     "shadow-cljs supports simple dynamic import provided by Google Closure Compiler. So you may split code into seperated bundles and load when needed.")
-    (render-snippet
-     "clojure"
-     "(ns app.extra)\n\n(defn async-code! []\n  (println \"async code!\"))\n\n; another file\n\n(ns app.main\n  (:require [shadow.loader :as loader]))\n\n(defn on-load []\n  ((resolve 'app.extra/async-code!))\n\n(defn main! []\n  (loader/with-module \"extra\" on-load))\n"))))
+   (style
+    {:inner-text ".md-code-block {\n    background-color: rgb(12, 43, 82);\n    color: white;\n    font-family: \"Source Code Pro\", \"Ubuntu Mono\", Menlo, monospace;\n    font-size: 14px;\n    line-height: 24px;\n    margin: 0px;\n    max-width: 100%;\n    overflow: auto;\n    padding: 16px;\n    width: 600px;\n}"})
+   (comp-md-block
+    "### Easy to install\n\nshadow-cljs can be installed from npm, and being used as command-line tool. You may need JVM installed, but no need to configure JVM environment or Clojure environment before you can compile ClojureScript. shadow-cljs handles configurations for you.\n\n```bash\nnpm install -g shadow-cljs\n# or with yarn\nyarn global add shadow-cljs\n```\n\n### Easy to configure\n\nshadow-cljs uses a config file called shadow-cljs.edn . It's just a config file you can add things declaratively, instead of writing scripts to wind up plugins.\n\n```clojure\n{:dependencies [[reagent \"0.8.0-alpha2\"]]\n\n :source-paths [\"src\"]\n\n :builds {:app {:target :browser\n                :output-dir \"public/js\"\n                :asset-path \"/js\"\n                :modules {:main {:entries [my.app]}}}}}\n```\n\n### Import JavaScript code from npm\n\nIn shadow-cljs, importing npm package is becoming trivial.\n\n```clojure\n(ns app.main\n  (:require [\"md5\" :as md5]\n            [\"fs\" :as fs]))\n\n(println (md5 \"text\"))\n\n(fs/readFileSync \"deps.den\" \"utf8\")\n```\n\n### Hot code swapping\n\nRoughly same hot code swapping support like in lein-figwheel. Code are compiled incrementally, error messages are prettified.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n\n                    :devtools {:after-load app.main/reload!\n                               :preloads [shadow.cljs.devtools.client.hud]\n                               :http-root \"target\"\n                               :http-port 8080}}}}\n```\n\n### Long term caching\n\nBy setting in :module-hash-names field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile manifest.edn file can be emitted for indexing js files in HTML.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n                    \n                    :release {:output-dir \"dist/\"\n                              :module-hash-names 8\n                              :build-options {:manifest-name \"assets.edn\"}}}}}\n```\n\n### Dynamic code loading\n\nshadow-cljs supports simple dynamic import provided by Google Closure Compiler. So you may split code into seperated bundles and load when needed.\n\n```clojure\n(ns app.extra)\n\n(defn async-code! []\n  (println \"async code!\"))\n\n; another file\n\n(ns app.main\n  (:require [shadow.loader :as loader]))\n\n(defn on-load []\n  ((resolve 'app.extra/async-code!))\n\n(defn main! []\n  (loader/with-module \"extra\" on-load))\n```\n"
+    {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))
 
 (defn render-footer []
   (div

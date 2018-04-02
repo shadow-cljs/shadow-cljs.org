@@ -8,8 +8,24 @@ http://shadow-cljs.org
 
 ### Usage
 
-```bash
+This project uses yarn to manage tasks and dependencies:
+
+```yarn
 yarn
+```
+
+Develop:
+
+```bash
+yarn watch # listens on 7000
+
+# after sever started, generate HTML fisrt
+yarn shadow-cljs clj-run build.main/html
+```
+
+Build:
+
+```bash
 yarn shadow-cljs clj-run build.main/build-local
 yarn http-server dist
 ```
@@ -17,8 +33,6 @@ yarn http-server dist
 ### Workflow
 
 Workflow https://github.com/mvc-works/calcit-workflow
-
-> Clojure code written with [Calcit Editor](https://github.com/Cirru/calcit-editor/).
 
 ### License
 

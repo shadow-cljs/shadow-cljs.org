@@ -113,7 +113,7 @@
               :pointer-events :none}}))
    (=< nil 32)
    (div
-    {:style ui/row-center}
+    {:style (merge ui/row-center {:flex-wrap :wrap})}
     (a
      {:href "https://medium.com/@jiyinyiyong/a-beginner-guide-to-compile-clojurescript-with-shadow-cljs-26369190b786",
       :target "_blank"}

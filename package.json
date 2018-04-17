@@ -7,6 +7,7 @@
     "watch": "shadow-cljs watch client",
     "build": "shadow-cljs clj-run build.main/build",
     "page": "shadow-cljs clj-run build.main/page",
+    "upload": "clj -m build.upload",
     "serve": "http-server dist -s",
     "repl": "rlwrap shadow-cljs clj-repl"
   },

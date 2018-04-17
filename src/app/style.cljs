@@ -9,8 +9,8 @@
     :line-height "48px",
     :border-radius "24px",
     :font-size 20,
-    :font-family "Josefin Sans, Helvetica, Arial, sans-serif",
+    :font-family ui/font-fancy,
     :padding "0 32px",
     :background-color :transparent,
-    :border (str "1px solid " theme/green),
-    :color theme/green}))
+    :border (str "1px solid " "white"),
+    :color :white}))

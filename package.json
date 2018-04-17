@@ -4,7 +4,9 @@
   "description": "shadow-cljs site",
   "main": "index.js",
   "scripts": {
-    "watch": "shadow-cljs watch browser",
+    "watch": "shadow-cljs watch client",
+    "build": "shadow-cljs clj-run build.main/build",
+    "page": "shadow-cljs clj-run build.main/page",
     "serve": "http-server dist -s",
     "repl": "rlwrap shadow-cljs clj-repl"
   },
@@ -16,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "shadow-cljs": "2.2.6"
+    "shadow-cljs": "2.3.0"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",

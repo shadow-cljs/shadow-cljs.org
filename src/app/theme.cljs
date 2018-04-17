@@ -5,7 +5,7 @@
 
 (def blue-dark "rgb(79,129,212)")
 
-(def dark "rgb(12,43,82)")
+(def dark "rgb(137, 180, 255)")
 
 (def green "rgb(136,217,85)")
 

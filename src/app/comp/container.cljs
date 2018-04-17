@@ -11,29 +11,29 @@
             [app.theme :as theme]
             [app.style :as style]
             [respo-md.comp.md :refer [comp-md-block]]
-            ["highlight.js" :as hljs]))
+            ["highlight.js" :as hljs]
+            [app.schema :refer [dev?]]))
 
 (defn render-features []
   (div
-   {:style {:margin "auto", :width 600, :max-width "100%"}}
-   (style
-    {:inner-text ".md-code-block {\n    background-color: rgb(12, 43, 82);\n    color: white;\n    font-family: \"Source Code Pro\", \"Ubuntu Mono\", Menlo, monospace;\n    font-size: 14px;\n    line-height: 24px;\n    margin: 8px 0px;\n    max-width: 100%;\n    overflow: auto;\n    padding: 16px;\n    width: 600px;\n}"})
+   {:style {:margin "auto", :max-width 800, :padding 16}}
    (comp-md-block
     "### Easy to install\n\nshadow-cljs can be installed from npm as command-line tool. JVM installation is required, but shadow-cljs handles configurations for you.\n\n```bash\nnpm install -g shadow-cljs\n# or\nyarn global add shadow-cljs\n```\n\n### Friendly to configure\n\nSuppose the namespace for you main file is `my.app`:\n\n```bash\nsrc/\n  my/\n    app.cljs\npublic/\n```\n\nYou can create a `shadow-cljs.edn` file to configure shadow-cljs:\n\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[reagent \"0.8.0-alpha2\"]]\n :builds {:app {:target :browser\n                :output-dir \"public/js\"\n                :asset-path \"/js\"\n                :modules {:main {:entries [my.app]}}}}}\n```\n\n`:target :browser` specifies it will build code for browsers. You may use `:target :nodejs` for Node.js code. [There are more targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).\n\n### CLI tools\n\nCommonly used shadow-cljs commands during development:\n\n```bash\n# compile a build once and exit\nshadow-cljs compile app\n\n# compile and watch\nshadow-cljs watch app\n\n# connect to REPL for the build (available while watch is running)\nshadow-cljs cljs-repl app\n\n# connect to standalone node repl\nshadow-cljs node-repl\n```\n\nRunning a release build optimized for production use.\n\n```bash\nshadow-cljs release app\n```\n\n### Import npm module\n\nWith shadow-cljs, most npm modules for browser can be imported with after module installed locally.\n\n```clojure\n(ns app.main\n  (:require [\"md5\" :as md5]\n            [\"fs\" :as fs]))\n\n(println (md5 \"text\"))\n\n(fs/readFileSync \"deps.den\" \"utf8\")\n```\n\n### Hot code swapping\n\nshadow-cljs watch file changes and re-compiles in watching mode. Code are compiled incrementally, warnings and errors are displayed after prettified.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n\n                    :devtools {:after-load app.main/reload!\n                               :http-root \"target\"\n                               :http-port 8080}}}}\n```\n\n### Long term caching\n\nBy setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile `assets.edn` file can be emitted for indexing js files in HTML.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n                    \n                    :release {:output-dir \"dist/\"\n                              :module-hash-names 8\n                              :build-options {:manifest-name \"assets.edn\"}}}}}\n```\n\n### Other features\n\nThere are more features you may exlore in shadow-cljs\n\n* [Dynamic code loading](https://shadow-cljs.github.io/docs/UsersGuide.html#_loading_code_dynamically)\n* [Head-up Dislpay for warnings and errors if any](https://shadow-cljs.github.io/docs/UsersGuide.html#hud)\n* [Testing](https://shadow-cljs.github.io/docs/UsersGuide.html#_testing)\n* [Editor Intergration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration)\n\nRead [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) for more features...\n"
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))
 
 (defn render-footer []
   (div
-   {:style {:height 120,
+   {:style {:height 240,
             :background-color theme/dark,
             :margin-top 120,
             :color theme/green-dark,
             :padding 16}}
-   (<> "This page is powered by shadow-cljs and Respo. ")
-   (a
-    {:href "https://github.com/shadow-cljs/shadow-cljs.org",
-     :style {:color theme/green-dark}}
-    (<> "shadow-cljs/shadow-cljs.org"))))
+   (div
+    {:style {:max-width 800, :margin :auto, :color :white}}
+    (<> "This page is powered by shadow-cljs and Respo. ")
+    (a
+     {:href "https://github.com/shadow-cljs/shadow-cljs.org", :style {:color :white}}
+     (<> "shadow-cljs/shadow-cljs.org")))))
 
 (defn render-header []
   (div
@@ -77,10 +77,40 @@
      {:style {:vertical-align :middle}, :src "https://img.shields.io/npm/v/shadow-cljs.svg"}))
    (=< nil 32)
    (div
-    {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs.png)",
-             :background-size "cover",
-             :width 240,
-             :height 240}})
+    {:style {:width 240,
+             :height 240,
+             :overflow :hidden,
+             :position :relative,
+             :background-color "rgb(67,128,219)",
+             :border-radius "50%"}}
+    (div
+     {:class-name "bubble circle-red",
+      :style {:border-radius "50%",
+              :background-color "#b04b00",
+              :width 279,
+              :height 279,
+              :position :absolute}})
+    (div
+     {:class-name "bubble circle-blue",
+      :style {:border-radius "50%",
+              :background-color "#89b4ff",
+              :width 71,
+              :height 71,
+              :position :absolute}})
+    (div
+     {:class-name "bubble circle-green",
+      :style {:border-radius "50%",
+              :background-color "#76e013",
+              :width 129,
+              :height 129,
+              :position :absolute}})
+    (div
+     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-outline.png)",
+              :background-size "cover",
+              :position :relative,
+              :width "100%",
+              :height "100%",
+              :pointer-events :none}}))
    (=< nil 32)
    (div
     {:style ui/row-center}
@@ -107,4 +137,4 @@
     (render-visual)
     (render-features)
     (render-footer)
-    (cursor-> :reel comp-reel states reel {}))))
+    (if dev? (cursor-> :reel comp-reel states reel {})))))

@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: Hind, Helvetica, Arial, sans-serif;
   font-display: optional;
-  background-color: rgb(12, 43, 82);
+  background-color: rgb(137, 180, 255);
 }
 
 body * {
@@ -29,4 +29,43 @@ body * {
 
 ::-webkit-resizer{
   background-color:transparent;
+}
+
+.md-code-block {
+    font-family: "Source Code Pro", "Ubuntu Mono", Menlo, monospace;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 8px 0px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 8px 8px;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+}
+
+.md-block h3 {
+  font-weight: 100;
+  font-size: 24px;
+  margin-top: 48px;
+}
+
+.circle-red {
+    top: 121px;
+    left: -97px;
+}
+.circle-blue {
+    top: 94px;
+    left: 191px;
+}
+.circle-green {
+    top: 126px;
+    left: 102px;
+}
+
+.bubble {
+  transition-duration: 300ms;
+}
+.bubble:hover {
+  transform: scale(1.06);
+  filter: brightness(112%);
 }

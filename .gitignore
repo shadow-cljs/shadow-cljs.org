@@ -6,3 +6,4 @@
 .cpcache/
 yarn-error.log
 .nrepl-port
+.vscode/

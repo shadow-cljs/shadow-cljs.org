@@ -17,7 +17,7 @@ yarn watch # HTTP server listening on 7000
 # generate HTML from another terminal after watch server started
 yarn page
 # add soft link for the CSS file
-cd target && ln -s ../entry/
+(cd target && ln -s ../entry/)
 ```
 
 Build:

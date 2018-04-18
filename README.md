@@ -8,25 +8,22 @@ http://shadow-cljs.org
 
 ### Usage
 
-This project uses yarn to manage tasks and dependencies:
-
-```yarn
-yarn
-```
-
 Develop:
 
 ```bash
-yarn watch # listens on 7000
+yarn
+yarn watch # HTTP server listening on 7000
 
-# after sever started, generate HTML fisrt
-yarn shadow-cljs clj-run build.main/html
+# generate HTML from another terminal after watch server started
+yarn page
+# add soft link for the CSS file
+cd target && ln -s ../entry/
 ```
 
 Build:
 
 ```bash
-yarn shadow-cljs clj-run build.main/build-local
+yarn build-local
 yarn http-server dist
 ```
 

@@ -84,9 +84,9 @@
              :background-color "rgb(67,128,219)",
              :border-radius "50%"}}
     (div
-     {:class-name "bubble circle-red",
+     {:class-name "bubble circle-green",
       :style {:border-radius "50%",
-              :background-color "#b04b00",
+              :background-color "rgb(65,180,0)",
               :width 279,
               :height 279,
               :position :absolute}})
@@ -98,7 +98,7 @@
               :height 71,
               :position :absolute}})
     (div
-     {:class-name "bubble circle-green",
+     {:class-name "bubble circle-yellow",
       :style {:border-radius "50%",
               :background-color "#76e013",
               :width 129,

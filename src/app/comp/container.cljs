@@ -77,12 +77,15 @@
      {:style {:vertical-align :middle}, :src "https://img.shields.io/npm/v/shadow-cljs.svg"}))
    (=< nil 32)
    (div
-    {:style {:width 240,
-             :height 240,
-             :overflow :hidden,
-             :position :relative,
-             :background-color "rgb(67,128,219)",
-             :border-radius "50%"}}
+    {:class-name "logo-circle",
+     :style {:width 240, :height 240, :position :relative, :border-radius "50%"}}
+    (div
+     {:class-name "bubble circle-dark",
+      :style {:border-radius "50%",
+              :background-color "rgb(67,128,219)",
+              :width 652,
+              :height 652,
+              :position :absolute}})
     (div
      {:class-name "bubble circle-green",
       :style {:border-radius "50%",
@@ -105,7 +108,8 @@
               :height 129,
               :position :absolute}})
     (div
-     {:style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-outline.png)",
+     {:class-name "logo-s",
+      :style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-outline.png)",
               :background-size "cover",
               :position :relative,
               :width "100%",

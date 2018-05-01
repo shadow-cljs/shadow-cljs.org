@@ -62,10 +62,41 @@ body * {
     left: 102px;
 }
 
+.circle-dark {
+    left: -280px;
+    top: -460px;
+}
+
 .bubble {
+    cursor: pointer;
   transition-duration: 300ms;
 }
 .bubble:hover {
   transform: scale(1.06);
   filter: brightness(112%);
+}
+
+.logo-circle {
+    overflow:hidden;
+}
+.logo-circle:hover {
+    overflow: visible;
+    opacity: 0.6;
+
+}
+
+@keyframes breathing {
+    0% {opacity: 0.9}
+    50% {opacity: 0.5}
+    100% {opacity: 0.9}
+}
+
+.logo-s {
+    animation: breathing 7s ease-out infinite normal;
+}
+
+
+.logo-circle:hover .logo-s {
+    animation:none;
+    opacity: 0;
 }

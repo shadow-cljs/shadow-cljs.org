@@ -77,22 +77,21 @@ body * {
 }
 
 .logo-circle {
-    overflow:hidden;
+    overflow: hidden;
 }
 .logo-circle:hover {
     overflow: visible;
     opacity: 0.6;
-
 }
 
 @keyframes breathing {
-    0% {opacity: 0.9}
-    50% {opacity: 0.5}
-    100% {opacity: 0.9}
+    0% {opacity: 1}
+    50% {opacity: 0.6}
+    100% {opacity: 1}
 }
 
 .logo-s {
-    animation: breathing 7s ease-out infinite normal;
+    animation: breathing 3.2s ease-out infinite normal;
 }
 
 

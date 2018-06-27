@@ -1,6 +1,9 @@
 
 (ns app.schema )
 
-(def dev? js/goog.DEBUG)
+(def dev?
+  (if (exists? js/window)
+    (do ^boolean js/goog.DEBUG)
+    (not= "dev" (-> js/process .-env .-env))))
 
 (def store {:states {}, :content ""})

@@ -352,7 +352,7 @@
           :type :expr, :by "root", :at 1520739935757, :id "SJ_DLXftM"
           :data {
            "T" {:type :leaf, :by "root", :at 1520783905566, :text "comp-md-block", :id "SJ_DLXftMleaf"}
-           "j" {:type :leaf, :by "rJG4IHzWf", :at 1525235007907, :text "|### Easy to install\n\nshadow-cljs can be installed from npm as command-line tool. JVM installation is required, but shadow-cljs handles configurations for you.\n\n```bash\nnpm install -g shadow-cljs\n# or\nyarn global add shadow-cljs\n```\n\n### Friendly to configure\n\nSuppose the namespace for you main file is `my.app`:\n\n```bash\nsrc/\n  my/\n    app.cljs\npublic/\n```\n\nYou can create a `shadow-cljs.edn` file to configure shadow-cljs:\n\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[reagent \"0.8.0-alpha2\"]]\n :builds {:app {:target :browser\n                :output-dir \"public/js\"\n                :asset-path \"/js\"\n                :modules {:main {:entries [my.app]}}}}}\n```\n\n`:target :browser` specifies it will build code for browsers. You may use `:target :node-script` [for Node.js code](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs). [There are more targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).\n\n### CLI tools\n\nCommonly used shadow-cljs commands during development:\n\n```bash\n# compile a build once and exit\nshadow-cljs compile app\n\n# compile and watch\nshadow-cljs watch app\n\n# connect to REPL for the build (available while watch is running)\nshadow-cljs cljs-repl app\n\n# connect to standalone node repl\nshadow-cljs node-repl\n```\n\nRunning a release build optimized for production use.\n\n```bash\nshadow-cljs release app\n```\n\n### Import npm module\n\nWith shadow-cljs, most npm modules for browser can be imported with after module installed locally.\n\n```clojure\n(ns app.main\n  (:require [\"md5\" :as md5]\n            [\"fs\" :as fs]))\n\n(println (md5 \"text\"))\n\n(fs/readFileSync \"deps.den\" \"utf8\")\n```\n\n### Hot code swapping\n\nshadow-cljs watch file changes and re-compiles in watching mode. Code are compiled incrementally, warnings and errors are displayed after prettified.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n\n                    :devtools {:after-load app.main/reload!\n                               :http-root \"target\"\n                               :http-port 8080}}}}\n```\n\n### Long term caching\n\nBy setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile `assets.edn` file can be emitted for indexing js files in HTML.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n                    \n                    :release {:output-dir \"dist/\"\n                              :module-hash-names 8\n                              :build-options {:manifest-name \"assets.edn\"}}}}}\n```\n\n### Other features\n\nThere are more features you may explore in shadow-cljs:\n\n* [Dynamic code loading](https://shadow-cljs.github.io/docs/UsersGuide.html#_loading_code_dynamically)\n* [Head-up Dislpay for warnings and errors if any](https://shadow-cljs.github.io/docs/UsersGuide.html#hud)\n* [Testing](https://shadow-cljs.github.io/docs/UsersGuide.html#_testing)\n* [Editor Intergration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration)\n\nRead [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) for more features.\n", :id "SyCvI7MKM"}
+           "j" {:type :leaf, :by "root", :at 1530118949903, :text "|### Easy to install\n\nshadow-cljs can be installed from npm as command-line tool. JVM installation is required, but shadow-cljs handles configurations for you.\n\n```bash\nnpm install -g shadow-cljs\n# or\nyarn global add shadow-cljs\n```\n\n### Friendly to configure\n\nSuppose the namespace for you main file is `my.app`:\n\n```bash\nsrc/\n  my/\n    app.cljs\npublic/\n```\n\nYou can create a `shadow-cljs.edn` file to configure shadow-cljs:\n\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[reagent \"0.8.0-alpha2\"]]\n :builds {:app {:target :browser\n                :output-dir \"public/js\"\n                :asset-path \"/js\"\n                :modules {:main {:entries [my.app]}}}}}\n```\n\n`:target :browser` specifies it will build code for browsers. You may use `:target :node-script` [for Node.js code](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs). [There are more targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).\n\n### CLI tools\n\nCommonly used shadow-cljs commands during development:\n\n```bash\n# compile a build once and exit\nshadow-cljs compile app\n\n# compile and watch\nshadow-cljs watch app\n\n# connect to REPL for the build (available while watch is running)\nshadow-cljs cljs-repl app\n\n# connect to standalone node repl\nshadow-cljs node-repl\n```\n\nRunning a release build optimized for production use.\n\n```bash\nshadow-cljs release app\n```\n\n### Import npm module\n\nWith shadow-cljs, most npm modules for browser can be imported with after module installed locally.\n\n```clojure\n(ns app.main\n  (:require [\"md5\" :as md5]\n            [\"fs\" :as fs]))\n\n(println (md5 \"text\"))\n\n(fs/readFileSync \"deps.den\" \"utf8\")\n```\n\nRead more at [Guide on how to use/import npm modules/packages in ClojureScript?](https://clojureverse.org/t/guide-on-how-to-use-import-npm-modules-packages-in-clojurescript/2298)\n\n### Hot code swapping\n\nshadow-cljs watch file changes and re-compiles in watching mode. Code are compiled incrementally, warnings and errors are displayed after prettified.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n\n                    :devtools {:after-load app.main/reload!\n                               :http-root \"target\"\n                               :http-port 8080}}}}\n```\n\n### Long term caching\n\nBy setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile `assets.edn` file can be emitted for indexing js files in HTML.\n\n```clojure\n{:source-paths [\"src\"]\n :dependencies [[mvc-works/hsl \"0.1.2\"]]\n :builds {:browser {:target :browser\n                    :output-dir \"target/browser\"\n                    :modules {:main {:entries [app.main]}}\n                    \n                    :release {:output-dir \"dist/\"\n                              :module-hash-names 8\n                              :build-options {:manifest-name \"assets.edn\"}}}}}\n```\n\n### Other features\n\nThere are more features you may explore in shadow-cljs:\n\n* [Dynamic code loading](https://shadow-cljs.github.io/docs/UsersGuide.html#_loading_code_dynamically)\n* [Testing](https://shadow-cljs.github.io/docs/UsersGuide.html#_testing)\n* [Editor Integration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration)\n\nRead [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) for more features.\n", :id "SyCvI7MKM"}
            "r" {
             :type :expr, :by "root", :at 1520739947773, :id "H1eNOLmMKf"
             :data {
@@ -2642,7 +2642,43 @@
       :data {
        "T" {:type :leaf, :by "root", :at 1523983790242, :text "def", :id "S1-SnHjm2f"}
        "j" {:type :leaf, :by "root", :at 1523983789052, :text "dev?", :id "HkfH2Hjmnf"}
-       "r" {:type :leaf, :by "root", :at 1523983796730, :text "js/goog.DEBUG", :id "rJzPnrjm2f"}
+       "r" {
+        :type :expr, :by "root", :at 1530118800966, :id "HyxKcGH-zQ"
+        :data {
+         "D" {:type :leaf, :by "root", :at 1530118803057, :text "if", :id "Bk59fr-Mm"}
+         "L" {
+          :type :expr, :by "root", :at 1530118806465, :id "SJg09fS-zX"
+          :data {
+           "T" {:type :leaf, :by "root", :at 1530118809580, :text "exists?", :id "B1n5fH-fm"}
+           "j" {:type :leaf, :by "root", :at 1530118813004, :text "js/window", :id "HkefizBZf7"}
+          }
+         }
+         "T" {
+          :type :expr, :by "root", :at 1530118815136, :id "S1ewofBbMQ"
+          :data {
+           "D" {:type :leaf, :by "root", :at 1530118815934, :text "do", :id "ByOjfB-fm"}
+           "L" {:type :leaf, :by "root", :at 1530118818543, :text "^boolean", :id "rkfOjGSWfm"}
+           "T" {:type :leaf, :by "root", :at 1523983796730, :text "js/goog.DEBUG", :id "rJzPnrjm2f"}
+          }
+         }
+         "j" {
+          :type :expr, :by "root", :at 1530118819315, :id "Bk-ijGBbzm"
+          :data {
+           "T" {:type :leaf, :by "root", :at 1530118823775, :text "not=", :id "Bk-ijGBbzmleaf"}
+           "j" {:type :leaf, :by "root", :at 1530118825854, :text "\"dev", :id "H1-hMHWf7"}
+           "r" {
+            :type :expr, :by "root", :at 1530118827184, :id "HkgmnfH-fm"
+            :data {
+             "T" {:type :leaf, :by "root", :at 1530118828111, :text "->", :id "ByQ2MBZMQ"}
+             "j" {:type :leaf, :by "root", :at 1530118830127, :text "js/process", :id "B1ShfSZzm"}
+             "r" {:type :leaf, :by "root", :at 1530118831527, :text ".-env", :id "Hy7LnfB-GX"}
+             "v" {:type :leaf, :by "root", :at 1530118833070, :text ".-env", :id "r1e_hMSbM7"}
+            }
+           }
+          }
+         }
+        }
+       }
       }
      }
      "store" {

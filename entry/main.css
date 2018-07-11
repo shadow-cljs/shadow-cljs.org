@@ -31,10 +31,20 @@ body * {
   background-color:transparent;
 }
 
+.md-p {
+    margin: 16px 0;
+}
+
+.md-code-block code,
+.md-p code {
+  font-family: "Source Code Pro", "Ubuntu Mono", Menlo, monospace;
+  font-size: 14px;
+}
+
 .md-code-block {
     font-family: "Source Code Pro", "Ubuntu Mono", Menlo, monospace;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 21px;
     margin: 8px 0px;
     max-width: 100%;
     overflow: auto;

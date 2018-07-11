@@ -20,10 +20,10 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "shadow-cljs": "^2.4.11"
+    "shadow-cljs": "^2.4.19"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.11"
   }
 }

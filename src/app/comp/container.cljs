@@ -4,7 +4,7 @@
             [respo-ui.core :as ui]
             [respo.macros
              :refer
-             [defcomp cursor-> <> div button textarea pre a span img style]]
+             [defcomp cursor-> <> div button textarea pre a span img style meta']]
             [verbosely.core :refer [verbosely!]]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]
@@ -13,6 +13,17 @@
             [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]
             [app.schema :refer [dev?]]))
+
+(defcomp
+ comp-open-graph
+ ()
+ (div
+  {}
+  (meta' {:property "og:type", :content "website"})
+  (meta' {:property "og:title", :content "shadow-cljs"})
+  (meta' {:property "og:description", :content "ClojureScript compilation made easy!"})
+  (meta' {:property "og:image", :content "http://cdn.tiye.me/logo/shadow-cljs.png"})
+  (meta' {:property "og:url", :content "http://shadow-cljs.org"})))
 
 (defn render-features []
   (div
@@ -137,6 +148,7 @@
  (let [store (:store reel), states (:states store)]
    (div
     {:style {:background-color :white}}
+    (comp-open-graph)
     (render-header)
     (render-visual)
     (render-features)

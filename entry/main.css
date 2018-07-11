@@ -54,7 +54,7 @@ body * {
     left: -97px;
 }
 .circle-blue {
-    top: 94px;
+    top: 99px;
     left: 191px;
 }
 .circle-yellow {
@@ -68,7 +68,7 @@ body * {
 }
 
 .bubble {
-    cursor: pointer;
+  cursor: pointer;
   transition-duration: 300ms;
 }
 .bubble:hover {
@@ -78,24 +78,4 @@ body * {
 
 .logo-circle {
     overflow: hidden;
-}
-.logo-circle:hover {
-    overflow: visible;
-    opacity: 0.6;
-}
-
-@keyframes breathing {
-    0% {opacity: 1}
-    50% {opacity: 0.6}
-    100% {opacity: 1}
-}
-
-.logo-s {
-    animation: breathing 3.2s ease-out infinite normal;
-}
-
-
-.logo-circle:hover .logo-s {
-    animation:none;
-    opacity: 0;
 }

@@ -19,7 +19,7 @@
    (merge
     base-info
     {:styles ["http://localhost:8100/main.css" "/entry/main.css"],
-     :scripts ["/main.js"],
+     :scripts ["/client.js"],
      :inline-styles [(slurp "./node_modules/highlight.js/styles/github-gist.css")]})))
 
 (def preview? (= "preview" js/process.env.prod))

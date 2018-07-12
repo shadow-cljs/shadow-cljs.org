@@ -31,10 +31,20 @@ body * {
   background-color:transparent;
 }
 
+.md-p {
+    margin: 16px 0;
+}
+
+.md-code-block code,
+.md-p code {
+  font-family: "Source Code Pro", "Ubuntu Mono", Menlo, monospace;
+  font-size: 14px;
+}
+
 .md-code-block {
     font-family: "Source Code Pro", "Ubuntu Mono", Menlo, monospace;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 21px;
     margin: 8px 0px;
     max-width: 100%;
     overflow: auto;
@@ -54,7 +64,7 @@ body * {
     left: -97px;
 }
 .circle-blue {
-    top: 94px;
+    top: 99px;
     left: 191px;
 }
 .circle-yellow {
@@ -68,7 +78,7 @@ body * {
 }
 
 .bubble {
-    cursor: pointer;
+  cursor: pointer;
   transition-duration: 300ms;
 }
 .bubble:hover {
@@ -78,24 +88,4 @@ body * {
 
 .logo-circle {
     overflow: hidden;
-}
-.logo-circle:hover {
-    overflow: visible;
-    opacity: 0.6;
-}
-
-@keyframes breathing {
-    0% {opacity: 1}
-    50% {opacity: 0.6}
-    100% {opacity: 1}
-}
-
-.logo-s {
-    animation: breathing 3.2s ease-out infinite normal;
-}
-
-
-.logo-circle:hover .logo-s {
-    animation:none;
-    opacity: 0;
 }

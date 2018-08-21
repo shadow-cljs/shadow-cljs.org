@@ -59,6 +59,11 @@ body * {
   margin-top: 48px;
 }
 
+.md-p img {
+  width: calc(100% + 160px);
+  margin: 0 -80px;
+}
+
 .circle-green {
     top: 121px;
     left: -97px;

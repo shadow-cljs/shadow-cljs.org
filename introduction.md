@@ -15,6 +15,8 @@ To get shadow-cljs, run:
 npm install -g shadow-cljs
 ```
 
+![shadow-cljs demo](/entry/shadow-cljs-demo.png)
+
 Mind that shadow-cljs needs JVM in order to compile ClojureScript.
 
 [Try with an demo project!](https://github.com/minimal-xyz/minimal-shadow-cljs-browser)

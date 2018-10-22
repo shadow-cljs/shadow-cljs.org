@@ -13,7 +13,7 @@
             [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]
             [app.schema :refer [dev?]]
-            [app.macros :refer [inline-resource]]))
+            [build.util :refer [inline-resource]]))
 
 (defcomp
  comp-open-graph

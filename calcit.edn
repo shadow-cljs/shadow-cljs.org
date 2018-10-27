@@ -2294,22 +2294,7 @@
     }
     :proc {
      :type :expr, :id "SkGujdK5aSW", :by nil, :at 1499755354983
-     :data {
-      "T" {
-       :type :expr, :id "Bk7ds_t5TBb", :by nil, :at 1499755354983
-       :data {
-        "T" {:type :leaf, :text "set!", :id "SJ4_i_Y9TH-", :by "root", :at 1499755354983}
-        "j" {
-         :type :expr, :id "rkrdodtcTHW", :by nil, :at 1499755354983
-         :data {
-          "T" {:type :leaf, :text ".-onload", :id "H1Ldo_FcpH-", :by "root", :at 1499755354983}
-          "j" {:type :leaf, :text "js/window", :id "BJP_idK9arW", :by "root", :at 1499755354983}
-         }
-        }
-        "r" {:type :leaf, :text "main!", :id "Sku_ouK9aH-", :by "root", :at 1499755354983}
-       }
-      }
-     }
+     :data {}
     }
    }
    "app.page" {

@@ -27,20 +27,20 @@ Configuring a browser app with `shadow-cljs.edn`:
 
 ```clojure
 {:source-paths ["src"]
- :dependencies [[reagent "0.8.0-alpha2"]]
+ :dependencies [[reagent "0.8.1"]]
  :builds {:app {:target :browser
                 :output-dir "public/js"
                 :asset-path "/js"
-                :modules {:main {:entries [my.app]}}}}}
+                :modules {:main {:init-fn app.main/main!}}}}}
 ```
 
-Supposing the namespace for you main file is `my.app`:
+Supposing the namespace for you main file is `app.main`:
 
 ```bash
 shadow-cljs.edn
 src/
-  my/
-    app.cljs
+  app/
+    main.cljs
 public/
   js/
 ```
@@ -96,7 +96,7 @@ shadow-cljs watch file changes and re-compiles in watching mode. Code are compil
  :dependencies [[mvc-works/hsl "0.1.2"]]
  :builds {:browser {:target :browser
                     :output-dir "target/browser"
-                    :modules {:main {:entries [app.main]}}
+                    :modules {:main {:init-fn app.main/main!}}
 
                     :devtools {:after-load app.main/reload!
                                :http-root "target"
@@ -112,7 +112,7 @@ By setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 ha
  :dependencies [[mvc-works/hsl "0.1.2"]]
  :builds {:browser {:target :browser
                     :output-dir "target/browser"
-                    :modules {:main {:entries [app.main]}}
+                    :modules {:main {:init-fn app.main/main!}}
 
                     :release {:output-dir "dist/"
                               :module-hash-names 8

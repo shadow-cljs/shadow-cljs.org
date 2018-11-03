@@ -23,7 +23,7 @@ Mind that shadow-cljs needs JVM in order to compile ClojureScript.
 
 ### Configuration
 
-Configuring a browser app with `shadow-cljs.edn`:
+For a browser app, write in `shadow-cljs.edn` like:
 
 ```clojure
 {:source-paths ["src"]
@@ -34,18 +34,24 @@ Configuring a browser app with `shadow-cljs.edn`:
                 :modules {:main {:init-fn app.main/main!}}}}}
 ```
 
-Supposing the namespace for you main file is `app.main`:
+which means:
 
-```bash
-shadow-cljs.edn
-src/
-  app/
-    main.cljs
-public/
-  js/
+```clojure
+{:source-paths ["src"] ; where you put source files
+
+ :dependencies [[reagent "0.8.1"]] ; ClojureScript dependencies
+
+        ; "app" is the build-id, in running "shadow-cljs compile app"
+ :builds {:app {:target :browser ; compile code that loads in a browser
+                :output-dir "public/js"
+                :asset-path "/js" ; assets loaded from index.html are based on path "/js"
+
+                        ; "main.js" is the name for the bundle entry
+                :modules {:main {:init-fn app.main/main!}}}}}
+                               ; function app.main.main! is called when page loads
 ```
 
-`:target :browser` specifies it will build code for browsers. You may use `:target :node-script` [for Node.js code](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs). Find more about [targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).
+You may write `:target :node-script` [for running in Node.js](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs) and also try [more targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).
 
 ### CLI tools
 
@@ -135,3 +141,13 @@ There are more features you may explore in shadow-cljs:
 * [Editor Integration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration)
 
 Read [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) for more features.
+
+### Getting started
+
+Here are some configurations you can start with:
+
+* [compile a browser app](https://github.com/minimal-xyz/minimal-shadow-cljs-browser/blob/master/shadow-cljs.edn#L6)
+* [compile a Node.js script](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs/blob/master/shadow-cljs.edn#L4)
+* [compile with optimizations](https://github.com/minimal-xyz/minimal-shadow-cljs-release/blob/master/package.json#L12)
+* [emits multiple bundles and load on need](https://github.com/minimal-xyz/minimal-shadow-cljs-loader/blob/master/shadow-cljs.edn#L8-L10)
+* [emits code in CommonJS syntax](https://github.com/minimal-xyz/minimal-shadow-cljs-commonjs/blob/master/shadow-cljs.edn#L3)

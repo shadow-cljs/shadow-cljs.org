@@ -11,8 +11,8 @@
             [app.style :as style]
             [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]
-            [app.schema :refer [dev?]]
-            [build.util :refer [inline-resource]]))
+            [app.config :refer [dev?]]
+            [cumulo-util.build :refer [inline-resource]]))
 
 (defcomp
  comp-open-graph

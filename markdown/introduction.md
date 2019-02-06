@@ -2,7 +2,7 @@
 shadow-cljs provides everything you need to compile your ClojureScript code with a focus on simplicity and ease of use.
 
 * Good configuration defaults so you don't have to sweat the details
-* Supporting various targets `:browser`, `:node-script`, `:npm-module`, `:react-native`(exprimental)...
+* Supporting various targets `:browser`, `:node-script`, `:npm-module`, `:react-native` (experimental)...
 * Live Reload (CLJS + CSS)
 * CLJS REPL
 * Importing CommonJS & ES6 modules from npm or local JavaScript files

@@ -12,7 +12,7 @@
             [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]
             [app.config :refer [dev?]]
-            [cumulo-util.build :refer [inline-resource]]))
+            [shadow.resource :refer [inline]]))
 
 (defcomp
  comp-open-graph
@@ -29,7 +29,7 @@
   (div
    {:style {:margin "auto", :max-width 800, :padding 16, :padding-top 40}}
    (comp-md-block
-    (inline-resource "introduction.md")
+    (inline "introduction.md")
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))
 
 (defn render-footer []

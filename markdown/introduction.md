@@ -9,19 +9,19 @@ shadow-cljs provides everything you need to compile your ClojureScript code with
 * Code splitting (via :modules)
 * Fast builds, reliable caching, ...
 
-To get shadow-cljs, run:
+To use shadow-cljs, add configs in the file `shadow-cljs.edn`, and run:
 
 ```bash
-npm install -g shadow-cljs
+npm install -g shadow-cljs # Node.js and JVM are required to be installed
+
+shadow-cljs compile app # `:app` is the build-id defined in shadow-cljs.edn
 ```
-
-![shadow-cljs demo](/entry/shadow-cljs-demo.png)
-
-Mind that shadow-cljs needs JVM in order to compile ClojureScript.
 
 [Try with an demo project!](https://github.com/minimal-xyz/minimal-shadow-cljs-browser)
 
-### Configuration
+![shadow-cljs demo](/entry/shadow-cljs-demo.png)
+
+### Configurations
 
 For a browser app, write in `shadow-cljs.edn` like:
 
@@ -55,7 +55,7 @@ You may write `:target :node-script` [for running in Node.js](https://github.com
 
 ### CLI tools
 
-Commonly used shadow-cljs commands during development:
+Some useful shadow-cljs commands during development are:
 
 ```bash
 # compile a build once and exit
@@ -77,7 +77,9 @@ Running a release build optimized for production use.
 shadow-cljs release app
 ```
 
-### Import npm modules
+Find out more [commands in the docs](https://shadow-cljs.github.io/docs/UsersGuide.html#_command_line).
+
+### Use npm modules
 
 With shadow-cljs, most npm modules for browser can be imported with modules installed locally.
 
@@ -100,13 +102,12 @@ shadow-cljs watch file changes and re-compiles in watching mode. Code are compil
 ```clojure
 {:source-paths ["src"]
  :dependencies [[mvc-works/hsl "0.1.2"]]
+ :dev-http {8080 "target/"}
  :builds {:browser {:target :browser
                     :output-dir "target/browser"
                     :modules {:main {:init-fn app.main/main!}}
 
-                    :devtools {:after-load app.main/reload!
-                               :http-root "target"
-                               :http-port 8080}}}}
+                    :devtools {:after-load app.main/reload!}}}}
 ```
 
 ### Long term caching
@@ -125,7 +126,7 @@ By setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 ha
                               :build-options {:manifest-name "assets.edn"}}}}}
 ```
 
-Afer compilation, two files will be generated in `dist/` with names:
+After compilation, two files will be generated in `dist/` with names:
 
 ```
 =>> l dist/
@@ -134,7 +135,7 @@ assets.edn        main.9683CD2F.js
 
 ### Other features
 
-There are more features you may explore in shadow-cljs:
+There are more features in shadow-cljs, such as:
 
 * [Dynamic code loading](https://shadow-cljs.github.io/docs/UsersGuide.html#_loading_code_dynamically)
 * [Testing](https://shadow-cljs.github.io/docs/UsersGuide.html#_testing)

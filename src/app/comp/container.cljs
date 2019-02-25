@@ -14,6 +14,8 @@
             [app.config :refer [dev?]]
             [shadow.resource :refer [inline]]))
 
+(defcomp comp-date (date) (<> date {:color (hsl 0 0 70), :font-family ui/font-fancy}))
+
 (defcomp
  comp-open-graph
  ()
@@ -28,6 +30,24 @@
 (defn render-features []
   (div
    {:style {:margin "auto", :max-width 800, :padding 16, :padding-top 40}}
+   (div
+    {:style {:background-color (hsl 0 0 96), :padding 16}}
+    (div {:style {:font-family ui/font-fancy, :font-size 20}} (<> "Recent posts"))
+    (div
+     {:style {:padding-top 12, :padding-left 12}}
+     (comp-date "2019-02-22")
+     (=< 8 nil)
+     (a
+      {:href "https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806",
+       :inner-text "React Native + expo with shadow-cljs",
+       :target "_blank"})
+     (div nil)
+     (comp-date "2019-01-22")
+     (=< 8 nil)
+     (a
+      {:href "https://github.com/thheller/shadow-cljs/issues/436",
+       :inner-text "Restructure dev-http configs",
+       :target "_blank"})))
    (comp-md-block
     (inline "introduction.md")
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))

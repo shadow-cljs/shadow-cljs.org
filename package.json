@@ -7,6 +7,7 @@
     "watch": "shadow-cljs watch client",
     "build-cdn": "shadow-cljs clj-run build.main/build-cdn",
     "build": "shadow-cljs clj-run build.main/build",
+    "page": "shadow-cljs clj-run build.main/page",
     "upload": "node target/upload.js",
     "up": "yarn build-cdn && yarn upload",
     "serve": "http-server dist -s",
@@ -21,10 +22,10 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "shadow-cljs": "^2.8.0"
+    "shadow-cljs": "^2.8.10"
   },
   "dependencies": {
-    "highlight.js": "^9.14.1",
+    "highlight.js": "^9.14.2",
     "shortid": "^2.2.14"
   }
 }

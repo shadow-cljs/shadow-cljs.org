@@ -508,6 +508,81 @@
        }
       }
      }
+     "comp-post" {
+      :type :expr, :by "rJG4IHzWf", :at 1551203651413, :id "hNShYoUmmM"
+      :data {
+       "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203653621, :text "defcomp", :id "mHZxtuhyML"}
+       "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203651413, :text "comp-post", :id "bn7dvFVmEU"}
+       "r" {
+        :type :expr, :by "rJG4IHzWf", :at 1551203651413, :id "04YttwXnMj"
+        :data {
+         "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203656236, :text "date", :id "VtqdmDel1"}
+         "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203657744, :text "title", :id "BMVuyUh4Xf"}
+         "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203658759, :text "link", :id "xvHPnu0oi6"}
+        }
+       }
+       "v" {
+        :type :expr, :by "rJG4IHzWf", :at 1551203659384, :id "0FYU5JkiWZ"
+        :data {
+         "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203660425, :text "div", :id "0FYU5JkiWZleaf"}
+         "j" {
+          :type :expr, :by "rJG4IHzWf", :at 1551203660621, :id "3rjSeS7Vs"
+          :data {
+           "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203660948, :text "{}", :id "ozwpUZ1jvd"}
+          }
+         }
+         "r" {
+          :type :expr, :by "rJG4IHzWf", :at 1551203668188, :id "lkJVNQnFW2"
+          :data {
+           "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203668188, :text "comp-date", :id "s56JOL8m8L"}
+           "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203695211, :text "date", :id "of5wY-SGU8"}
+          }
+         }
+         "v" {
+          :type :expr, :by "rJG4IHzWf", :at 1551203677383, :id "teTTD7wX_Z"
+          :data {
+           "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203677383, :text "=<", :id "KLq4TAW9FD"}
+           "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203677383, :text "8", :id "Q6mhY622mr"}
+           "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203677383, :text "nil", :id "BudQanlbT2"}
+          }
+         }
+         "x" {
+          :type :expr, :by "rJG4IHzWf", :at 1551203685939, :id "pNffV7EiFX"
+          :data {
+           "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text "a", :id "gBsgL3cwQ3"}
+           "j" {
+            :type :expr, :by "rJG4IHzWf", :at 1551203685939, :id "Py4y4us-xq"
+            :data {
+             "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text "{}", :id "ZNcwPdGCTJ"}
+             "j" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203685939, :id "neW6oGSF-q"
+              :data {
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text ":href", :id "esH4yF77H5"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203689762, :text "link", :id "Uwf_A7s6qK"}
+              }
+             }
+             "r" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203685939, :id "Obrvs8r8tT"
+              :data {
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text ":inner-text", :id "3RQyIQYCwF"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203691805, :text "title", :id "9QmvPy6fVJ"}
+              }
+             }
+             "v" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203685939, :id "0soadCcTeq"
+              :data {
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text ":target", :id "MCbYgJTOFW"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203685939, :text "\"_blank", :id "_Lrj16NyI9"}
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
      "render-features" {
       :type :expr, :id "Skl93nXGGz", :by "root", :at 1513401522460
       :data {
@@ -692,107 +767,31 @@
                }
               }
              }
-             "n" {
-              :type :expr, :by "rJG4IHzWf", :at 1551109965674, :id "1blVSJyyC"
+             "kr" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203633346, :id "v7sXT5WM-"
               :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109971288, :text "comp-date", :id "2Lhe70Tpx"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551109980199, :text "\"2019-02-22", :id "B9oAmKBmM"}
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203637013, :text "comp-post", :id "v7sXT5WM-leaf"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203734577, :text "\"2019-02-26", :id "qLBN-yu_G"}
+               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203737839, :text "\"shadow.lazy - Convenience wrapper for shadow.loader/cljs.loader", :id "4OhVKc7zF"}
+               "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203741674, :text "\"https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841", :id "BvcAAf1z3F"}
               }
              }
-             "p" {
-              :type :expr, :by "rJG4IHzWf", :at 1551110008028, :id "NmSxryB60F"
+             "kv" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203633346, :id "XWOpmMqDMZ"
               :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110009121, :text "=<", :id "NmSxryB60Fleaf"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110010762, :text "8", :id "inkRGgsY3G"}
-               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551110012102, :text "nil", :id "OqeNR1KSh"}
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203637013, :text "comp-post", :id "v7sXT5WM-leaf"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203641980, :text "\"2019-02-22", :id "qLBN-yu_G"}
+               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203646307, :text "\"React Native + expo with shadow-cljs", :id "4OhVKc7zF"}
+               "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203649699, :text "\"https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806", :id "BvcAAf1z3F"}
               }
              }
-             "r" {
-              :type :expr, :by "rJG4IHzWf", :at 1551109601328, :id "ywgukqEv7Y"
+             "kx" {
+              :type :expr, :by "rJG4IHzWf", :at 1551203633346, :id "V5HpemVtN"
               :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109601496, :text "a", :id "ywgukqEv7Yleaf"}
-               "j" {
-                :type :expr, :by "rJG4IHzWf", :at 1551109601931, :id "lWr0uOhnfB"
-                :data {
-                 "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109602390, :text "{}", :id "rVhtKRPP0"}
-                 "j" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551109605602, :id "j5AQ213hG"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109607489, :text ":href", :id "kU1gBWzPTN"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551109653058, :text "\"https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806", :id "FCIlvtdHc"}
-                  }
-                 }
-                 "r" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551109645545, :id "FG4g9nX25"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109647660, :text ":inner-text", :id "FG4g9nX25leaf"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551109648271, :text "\"React Native + expo with shadow-cljs", :id "jAg5mP9pNS"}
-                  }
-                 }
-                 "v" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551110292956, :id "z6CRGXKsLL"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110297417, :text ":target", :id "z6CRGXKsLLleaf"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110299426, :text "\"_blank", :id "esWSJX8IX0"}
-                  }
-                 }
-                }
-               }
-              }
-             }
-             "t" {
-              :type :expr, :by "rJG4IHzWf", :at 1551109850453, :id "n2pcovgX2n"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110739030, :text "div", :id "n2pcovgX2nleaf"}
-               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551109921031, :text "nil", :id "HGs9Jx2FHZ"}
-              }
-             }
-             "u" {
-              :type :expr, :by "rJG4IHzWf", :at 1551110274928, :id "A70pjAi3DP"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110274928, :text "comp-date", :id "MWCX4ioFGG"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110279414, :text "\"2019-01-22", :id "41ledI3yGt"}
-              }
-             }
-             "uT" {
-              :type :expr, :by "rJG4IHzWf", :at 1551110278129, :id "ZS9ufgEVi4"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110278129, :text "=<", :id "N8UcPxoqgq"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110278129, :text "8", :id "Lb2KLgeKKx"}
-               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551110278129, :text "nil", :id "uZd4DGrs13"}
-              }
-             }
-             "v" {
-              :type :expr, :by "rJG4IHzWf", :at 1551109848173, :id "qSDniVM67n"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109848173, :text "a", :id "lfQxNc8xey"}
-               "j" {
-                :type :expr, :by "rJG4IHzWf", :at 1551109848173, :id "PU08TxEJ9Q"
-                :data {
-                 "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109848173, :text "{}", :id "5_6_4M_JjS"}
-                 "j" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551109848173, :id "p0mAKb0o4S"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109848173, :text ":href", :id "VPkaRxdFAn"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110271246, :text "\"https://github.com/thheller/shadow-cljs/issues/436", :id "tNSZ_lWtUp"}
-                  }
-                 }
-                 "r" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551109848173, :id "u3RHYkTdoh"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551109848173, :text ":inner-text", :id "Pay0fI-gNt"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110267709, :text "\"Restructure dev-http configs", :id "j51aYWU9zy"}
-                  }
-                 }
-                 "v" {
-                  :type :expr, :by "rJG4IHzWf", :at 1551110302260, :id "VDlx1ZyjWQ"
-                  :data {
-                   "T" {:type :leaf, :by "rJG4IHzWf", :at 1551110302260, :text ":target", :id "mBFxq5OOw6"}
-                   "j" {:type :leaf, :by "rJG4IHzWf", :at 1551110302260, :text "\"_blank", :id "d_nsVUUO95"}
-                  }
-                 }
-                }
-               }
+               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203637013, :text "comp-post", :id "v7sXT5WM-leaf"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203779831, :text "\"2019-02-11", :id "qLBN-yu_G"}
+               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203722389, :text "\"Restructure dev-http configs", :id "4OhVKc7zF"}
+               "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203725925, :text "\"https://github.com/thheller/shadow-cljs/issues/436", :id "BvcAAf1z3F"}
               }
              }
             }

@@ -27,6 +27,11 @@
   (meta' {:property "og:image", :content "http://cdn.tiye.me/logo/shadow-cljs.png"})
   (meta' {:property "og:url", :content "http://shadow-cljs.org"})))
 
+(defcomp
+ comp-post
+ (date title link)
+ (div {} (comp-date date) (=< 8 nil) (a {:href link, :inner-text title, :target "_blank"})))
+
 (defn render-features []
   (div
    {:style {:margin "auto", :max-width 800, :padding 16, :padding-top 40}}
@@ -35,19 +40,18 @@
     (div {:style {:font-family ui/font-fancy, :font-size 20}} (<> "Recent posts"))
     (div
      {:style {:padding-top 12, :padding-left 12}}
-     (comp-date "2019-02-22")
-     (=< 8 nil)
-     (a
-      {:href "https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806",
-       :inner-text "React Native + expo with shadow-cljs",
-       :target "_blank"})
-     (div nil)
-     (comp-date "2019-01-22")
-     (=< 8 nil)
-     (a
-      {:href "https://github.com/thheller/shadow-cljs/issues/436",
-       :inner-text "Restructure dev-http configs",
-       :target "_blank"})))
+     (comp-post
+      "2019-02-26"
+      "shadow.lazy - Convenience wrapper for shadow.loader/cljs.loader"
+      "https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841")
+     (comp-post
+      "2019-02-22"
+      "React Native + expo with shadow-cljs"
+      "https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806")
+     (comp-post
+      "2019-02-11"
+      "Restructure dev-http configs"
+      "https://github.com/thheller/shadow-cljs/issues/436")))
    (comp-md-block
     (inline "introduction.md")
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))

@@ -41,6 +41,10 @@
     (div
      {:style {:padding-top 12, :padding-left 12}}
      (comp-post
+      "2019-03-01"
+      "What shadow-cljs is and isn’t"
+      "https://code.thheller.com/blog/shadow-cljs/2019/03/01/what-shadow-cljs-is-and-isnt.html")
+     (comp-post
       "2019-02-26"
       "shadow.lazy - Convenience wrapper for shadow.loader/cljs.loader"
       "https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841")

@@ -41,6 +41,10 @@
     (div
      {:style {:padding-top 12, :padding-left 12}}
      (comp-post
+      "2019-03-03"
+      "Code-Splitting ClojureScript"
+      "https://code.thheller.com/blog/shadow-cljs/2019/03/03/code-splitting-clojurescript.html")
+     (comp-post
       "2019-03-01"
       "What shadow-cljs is and isn’t"
       "https://code.thheller.com/blog/shadow-cljs/2019/03/01/what-shadow-cljs-is-and-isnt.html")

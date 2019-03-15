@@ -93,4 +93,5 @@ body * {
 
 .logo-circle {
     overflow: hidden;
+    transform: translateZ(0);
 }

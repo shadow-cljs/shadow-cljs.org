@@ -51,15 +51,7 @@
      (comp-post
       "2019-02-26"
       "shadow.lazy - Convenience wrapper for shadow.loader/cljs.loader"
-      "https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841")
-     (comp-post
-      "2019-02-22"
-      "React Native + expo with shadow-cljs"
-      "https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806")
-     (comp-post
-      "2019-02-11"
-      "Restructure dev-http configs"
-      "https://github.com/thheller/shadow-cljs/issues/436")))
+      "https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841")))
    (comp-md-block
     (inline "introduction.md")
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))

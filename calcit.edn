@@ -794,24 +794,6 @@
                "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203741674, :text "\"https://clojureverse.org/t/shadow-lazy-convenience-wrapper-for-shadow-loader-cljs-loader/3841", :id "BvcAAf1z3F"}
               }
              }
-             "kv" {
-              :type :expr, :by "rJG4IHzWf", :at 1551203633346, :id "XWOpmMqDMZ"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203637013, :text "comp-post", :id "v7sXT5WM-leaf"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203641980, :text "\"2019-02-22", :id "qLBN-yu_G"}
-               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203646307, :text "\"React Native + expo with shadow-cljs", :id "4OhVKc7zF"}
-               "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203649699, :text "\"https://clojureverse.org/t/react-native-expo-with-shadow-cljs/3806", :id "BvcAAf1z3F"}
-              }
-             }
-             "kx" {
-              :type :expr, :by "rJG4IHzWf", :at 1551203633346, :id "V5HpemVtN"
-              :data {
-               "T" {:type :leaf, :by "rJG4IHzWf", :at 1551203637013, :text "comp-post", :id "v7sXT5WM-leaf"}
-               "j" {:type :leaf, :by "rJG4IHzWf", :at 1551203779831, :text "\"2019-02-11", :id "qLBN-yu_G"}
-               "r" {:type :leaf, :by "rJG4IHzWf", :at 1551203722389, :text "\"Restructure dev-http configs", :id "4OhVKc7zF"}
-               "v" {:type :leaf, :by "rJG4IHzWf", :at 1551203725925, :text "\"https://github.com/thheller/shadow-cljs/issues/436", :id "BvcAAf1z3F"}
-              }
-             }
             }
            }
           }

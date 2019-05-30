@@ -9,7 +9,7 @@ shadow-cljs provides everything you need to compile your ClojureScript code with
 * CLJS REPL
 * Code splitting (via `:modules`)
 
-To use shadow-cljs, add configs in the file `shadow-cljs.edn`, and run:
+To use shadow-cljs, add your configurations in a `shadow-cljs.edn` file, and run:
 
 ```bash
 npm install -g shadow-cljs # Node.js and JVM are required to be installed
@@ -23,7 +23,7 @@ shadow-cljs compile app # `:app` is the build-id defined in shadow-cljs.edn
 
 ### Configurations
 
-For a browser app, write in `shadow-cljs.edn` like:
+For a browser app, create a `shadow-cljs.edn` file like:
 
 ```clojure
 {:source-paths ["src"]
@@ -97,7 +97,7 @@ Read more at [Guide on how to use/import npm modules/packages in ClojureScript?]
 
 ### Hot code swapping
 
-shadow-cljs watch file changes and re-compiles in watching mode. Code are compiled incrementally, warnings and errors are displayed after prettified.
+shadow-cljs watches for file changes and re-compiles code incrementally. Warnings and errors are displayed after being prettified.
 
 ```clojure
 {:source-paths ["src"]
@@ -110,9 +110,9 @@ shadow-cljs watch file changes and re-compiles in watching mode. Code are compil
                     :devtools {:after-load app.main/reload!}}}}
 ```
 
-### Long term caching
+### Long-term caching
 
-By setting in `:module-hash-names` field, you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack, now it's one-liner config in ClojureScript. Meanwhile `assets.edn` file can be emitted for indexing js files in HTML.
+By setting in `:module-hash-names` field you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack and now it's a one-liner config in ClojureScript. Meanwhile the `assets.edn` file can be emitted for indexing js files in HTML.
 
 ```clojure
 {:source-paths ["src"]
@@ -141,7 +141,7 @@ There are more features in shadow-cljs, such as:
 * [Testing](https://shadow-cljs.github.io/docs/UsersGuide.html#_testing)
 * [Editor Integration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration)
 
-Read [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) for more features.
+Read the [User Guide](https://shadow-cljs.github.io/docs/UsersGuide.html) to learn about all the features.
 
 ### Getting started
 

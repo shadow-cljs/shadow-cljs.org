@@ -17,7 +17,7 @@ npm install -g shadow-cljs # Node.js and JVM are required to be installed
 shadow-cljs compile app # `:app` is the build-id defined in shadow-cljs.edn
 ```
 
-[Try with an demo project!](https://github.com/minimal-xyz/minimal-shadow-cljs-browser)
+[Try with a demo project!](https://github.com/minimal-xyz/minimal-shadow-cljs-browser)
 
 ![shadow-cljs demo](/entry/shadow-cljs-demo.png)
 

@@ -110,6 +110,22 @@ shadow-cljs watches for file changes and re-compiles code incrementally. Warning
                     :devtools {:after-load app.main/reload!}}}}
 ```
 
+### None-code resources
+
+There are various use cases where you’d want to use a static resource as part of the compilation of you source files. shadow-cljs provides a macro `shadow.resource/inline` for loading files from inside classpaths:
+
+```clojure
+(ns demo.app
+  (:require [shadow.resource :as rc]))
+
+(def docs (rc/inline "./docs.md")) ; docs is the string content of the file
+
+; also like:
+; (def docs (rc/inline "demo/docs.md"))
+```
+
+This will resolve the `./docs.md` file relative to the current namespace, which means it will end up including `demo/docs.md` from somewhere on the classpath.
+
 ### Long-term caching
 
 By setting in `:module-hash-names` field you may tell shadow-cljs to add MD5 hash in the filenames generated. It's a trivial feature in Webpack and now it's a one-liner config in ClojureScript. Meanwhile the `assets.edn` file can be emitted for indexing js files in HTML.

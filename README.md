@@ -6,6 +6,8 @@ shadow-cljs.org
 
 http://shadow-cljs.org
 
+Content mainly in markdown file [markdown/introduction.md](markdown/introduction.md). Fork, edit, and send PR if you'd like to help.
+
 ### Usage
 
 Develop:

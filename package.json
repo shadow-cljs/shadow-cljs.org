@@ -8,8 +8,7 @@
     "build-cdn": "shadow-cljs clj-run build.main/build-cdn",
     "build": "shadow-cljs clj-run build.main/build",
     "page": "shadow-cljs clj-run build.main/page",
-    "upload": "node target/upload.js",
-    "up": "yarn build-cdn && yarn upload",
+    "up": "yarn build-cdn && tiye-up",
     "serve": "http-server dist -s",
     "repl": "rlwrap shadow-cljs clj-repl",
     "ln": "cd target && rm -f entry && ln -s ../entry"
@@ -22,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "shadow-cljs": "^2.8.52"
+    "shadow-cljs": "^2.8.58"
   },
   "dependencies": {
     "highlight.js": "^9.15.10",

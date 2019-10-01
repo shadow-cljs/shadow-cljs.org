@@ -65,10 +65,18 @@
             :padding 16}}
    (div
     {:style {:max-width 800, :margin :auto, :color :white}}
-    (<> "This page is powered by shadow-cljs and Respo. ")
+    (<> "Site built with shadow-cljs and ")
     (a
-     {:href "https://github.com/shadow-cljs/shadow-cljs.org", :style {:color :white}}
-     (<> "shadow-cljs/shadow-cljs.org")))))
+     {:href "http://respo-mvc.org",
+      :inner-text "Respo",
+      :target "_blank",
+      :style {:color :white}})
+    (<> ". Contribute content at ")
+    (a
+     {:href "https://github.com/shadow-cljs/shadow-cljs.org",
+      :inner-text "shadow-cljs/shadow-cljs.org",
+      :style {:color :white}})
+    (<> "."))))
 
 (defn render-header []
   (div

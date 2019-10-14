@@ -471,7 +471,7 @@
               :type :expr, :by "root", :at 1531325928884, :id "rklZeCiXXQ"
               :data {
                "T" {:type :leaf, :by "root", :at 1531325931220, :text ":content", :id "rklZeCiXXQleaf"}
-               "j" {:type :leaf, :by "root", :at 1531326012672, :text "\"http://cdn.tiye.me/logo/shadow-cljs.png", :id "ry87x0iQXQ"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1571023408742, :text "\"http://cdn.tiye.me/logo/shadow-cljs.png", :id "ry87x0iQXQ"}
               }
              }
             }
@@ -497,7 +497,7 @@
               :type :expr, :by "root", :at 1531325928884, :id "rklZeCiXXQ"
               :data {
                "T" {:type :leaf, :by "root", :at 1531325931220, :text ":content", :id "rklZeCiXXQleaf"}
-               "j" {:type :leaf, :by "root", :at 1531326024525, :text "\"http://shadow-cljs.org", :id "ry87x0iQXQ"}
+               "j" {:type :leaf, :by "rJG4IHzWf", :at 1571023407028, :text "\"http://shadow-cljs.org", :id "ry87x0iQXQ"}
               }
              }
             }
@@ -1972,7 +1972,7 @@
                     :type :expr, :id "Sy1ZYw2XGzz", :by "root", :at 1513401440694
                     :data {
                      "T" {:type :leaf, :text ":background-image", :id "r1gZtPh7fGf", :by "root", :at 1513401440694}
-                     "j" {:type :leaf, :text "|url(http://cdn.tiye.me/logo/shadow-cljs-outline.png)", :id "rJZWFD3mMMG", :by "root", :at 1523985027803}
+                     "j" {:type :leaf, :text "|url(https://cdn.tiye.me/logo/shadow-cljs-outline.png)", :id "rJZWFD3mMMG", :by "rJG4IHzWf", :at 1571023441466}
                     }
                    }
                    "r" {
@@ -2415,14 +2415,14 @@
           :type :expr, :by "root", :at 1545843379933, :id "rb7q4B5d_yH"
           :data {
            "T" {:type :leaf, :by "root", :at 1545843379933, :text ":release-ui", :id "nV0O3IxJ3bG"}
-           "j" {:type :leaf, :by "root", :at 1545843379933, :text "\"http://cdn.tiye.me/favored-fonts/main.css", :id "skYSK7m735R"}
+           "j" {:type :leaf, :by "rJG4IHzWf", :at 1571022970240, :text "\"https://cdn.tiye.me/favored-fonts/main.css", :id "skYSK7m735R"}
           }
          }
          "v" {
           :type :expr, :by "root", :at 1545843379933, :id "C2qOfqxvM99"
           :data {
            "T" {:type :leaf, :by "root", :at 1545843379933, :text ":cdn-url", :id "rTmreoYaMXm"}
-           "j" {:type :leaf, :by "root", :at 1545843549821, :text "\"http://cdn.tiye.me/shadow-cljs-org/", :id "Evln9VV4wi1"}
+           "j" {:type :leaf, :by "rJG4IHzWf", :at 1571022961467, :text "\"https://cdn.tiye.me/shadow-cljs-org/", :id "Evln9VV4wi1"}
           }
          }
          "y" {
@@ -2436,7 +2436,7 @@
           :type :expr, :by "root", :at 1545843379933, :id "R5dXdc-6R4P"
           :data {
            "T" {:type :leaf, :by "root", :at 1545843379933, :text ":icon", :id "FIr0YHzDLty"}
-           "j" {:type :leaf, :by "root", :at 1545843521558, :text "\"http://cdn.tiye.me/logo/shadow-cljs.png", :id "ghu_S2KJHjy"}
+           "j" {:type :leaf, :by "rJG4IHzWf", :at 1571022964909, :text "\"https://cdn.tiye.me/logo/shadow-cljs.png", :id "ghu_S2KJHjy"}
           }
          }
          "yj" {

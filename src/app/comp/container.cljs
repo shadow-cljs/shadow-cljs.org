@@ -152,7 +152,7 @@
               :position :absolute}})
     (div
      {:class-name "logo-s",
-      :style {:background-image "url(http://cdn.tiye.me/logo/shadow-cljs-outline.png)",
+      :style {:background-image "url(https://cdn.tiye.me/logo/shadow-cljs-outline.png)",
               :background-size "cover",
               :position :relative,
               :width "100%",

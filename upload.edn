@@ -1,6 +1,6 @@
 
 {:host "tiye.me"
  :uploads [{:from "dist/*"
-            :to "cdn/shadow-cljs-org/"}
+            :to "/web-assets/cdn/shadow-cljs-org/"}
            {:from "dist/{index.html,manifest.json}"
-            :to "repo/shadow-cljs/shadow-cljs.org/"}]}
+            :to "/web-assets/repo/shadow-cljs/shadow-cljs.org/"}]}

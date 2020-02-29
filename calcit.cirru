@@ -1325,11 +1325,11 @@
                   |j $ {} (:type :expr) (:by |root) (:at 1545843379933) (:id |nFXtdiXqcrG)
                     :data $ {}
                       |T $ {} (:type :leaf) (:by |root) (:at 1545843379933) (:text |:dev-ui) (:id |WCFlBW9XGK3)
-                      |j $ {} (:type :leaf) (:by |root) (:at 1545843379933) (:text "|\"http://localhost:8100/main.css") (:id |l0eZBvGO05u)
+                      |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1582995036449) (:text "|\"http://localhost:8100/main-fonts.css") (:id |l0eZBvGO05u)
                   |r $ {} (:type :expr) (:by |root) (:at 1545843379933) (:id |rb7q4B5d_yH)
                     :data $ {}
                       |T $ {} (:type :leaf) (:by |root) (:at 1545843379933) (:text |:release-ui) (:id |nV0O3IxJ3bG)
-                      |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1571022970240) (:text "|\"https://cdn.tiye.me/favored-fonts/main.css") (:id |skYSK7m735R)
+                      |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1582995034360) (:text "|\"https://cdn.tiye.me/favored-fonts/main-fonts.css") (:id |skYSK7m735R)
                   |v $ {} (:type :expr) (:by |root) (:at 1545843379933) (:id |C2qOfqxvM99)
                     :data $ {}
                       |T $ {} (:type :leaf) (:by |root) (:at 1545843379933) (:text |:cdn-url) (:id |rTmreoYaMXm)
@@ -1721,7 +1721,7 @@
                                   |j $ {} (:type :expr) (:by |root) (:at 1545843448123) (:id |VGkj9SqnCMY)
                                     :data $ {}
                                       |T $ {} (:type :leaf) (:by |root) (:at 1545843448123) (:text |<<) (:id |UbP0fk37Rox)
-                                      |j $ {} (:type :leaf) (:by |root) (:at 1545843448123) (:text "|\"http://~(get-ip!):8100/main.css") (:id |_jC3-K4nTWp)
+                                      |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1582995028007) (:text "|\"http://~(get-ip!):8100/main-fonts.css") (:id |_jC3-K4nTWp)
                                   |r $ {} (:type :leaf) (:by |root) (:at 1545843448123) (:text "|\"/entry/main.css") (:id |30FbPMrdLZf)
                           |r $ {} (:type :expr) (:by |root) (:at 1545843448123) (:id |n0LRSi84Hmn)
                             :data $ {}

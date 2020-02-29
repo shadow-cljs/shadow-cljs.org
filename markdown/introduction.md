@@ -51,7 +51,9 @@ which means:
                                ; function app.main.main! is called when page loads
 ```
 
-You may write `:target :node-script` [for running in Node.js](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs) and also try [more targets](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).
+Use `:target :node-script` [for compiling in Node.js](https://github.com/minimal-xyz/minimal-shadow-cljs-nodejs) and there are also [more targets to try](https://shadow-cljs.github.io/docs/UsersGuide.html#_build_target).
+
+To publish a ClojureScript package with dependencies from npm, add a [`dep.cljs`](https://shadow-cljs.github.io/docs/UsersGuide.html#publish-deps-cljs) file. shadow-cljs will read it and install those npm modules.
 
 ### CLI tools
 

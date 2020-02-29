@@ -15,8 +15,8 @@
       :else true)))
 
 (def site
-  {:dev-ui "http://localhost:8100/main.css",
-   :release-ui "https://cdn.tiye.me/favored-fonts/main.css",
+  {:dev-ui "http://localhost:8100/main-fonts.css",
+   :release-ui "https://cdn.tiye.me/favored-fonts/main-fonts.css",
    :cdn-url "https://cdn.tiye.me/shadow-cljs-org/",
    :title "shadow-cljs provides everything you need to compile your ClojureScript code with a focus on simplicity and ease of use.",
    :icon "https://cdn.tiye.me/logo/shadow-cljs.png",

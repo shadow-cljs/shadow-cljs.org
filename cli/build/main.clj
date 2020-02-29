@@ -14,7 +14,6 @@
   (sh! "rm -rf dist/*")
   (shadow/release :client)
   (shadow/compile :page)
-  (shadow/compile :upload)
   (sh! "release=true cdn=true node target/page.js")
   (sh! "mkdir -p dist/entry/ && cp entry/shadow-cljs-demo.png dist/entry")
   (sh! "cp entry/manifest.json dist/"))

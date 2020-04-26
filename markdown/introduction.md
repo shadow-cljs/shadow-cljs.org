@@ -112,9 +112,9 @@ shadow-cljs watches for file changes and re-compiles code incrementally. Warning
                     :devtools {:after-load app.main/reload!}}}}
 ```
 
-### None-code resources
+### Non-code resources
 
-There are various use cases where you’d want to use a static resource as part of the compilation of you source files. shadow-cljs provides a macro `shadow.resource/inline` for loading files from inside classpaths:
+There are various use-cases where you’d want to use a static resource as part of the compilation of your source files. shadow-cljs provides a macro `shadow.resource/inline` for loading files from inside classpaths:
 
 ```clojure
 (ns demo.app

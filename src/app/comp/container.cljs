@@ -4,7 +4,7 @@
             [respo-ui.core :as ui]
             [respo.core
              :refer
-             [defcomp cursor-> <> div button textarea pre a span img style meta']]
+             [defcomp >> <> div button textarea pre a span img style meta']]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]
             [app.theme :as theme]
@@ -185,4 +185,4 @@
     (render-visual)
     (render-features)
     (render-footer)
-    (if dev? (cursor-> :reel comp-reel states reel {})))))
+    (if dev? (comp-reel (>> states :reel) reel {})))))

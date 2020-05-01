@@ -103,12 +103,13 @@ shadow-cljs watches for file changes and re-compiles code incrementally. Warning
 
 ```clojure
 {:source-paths ["src"]
- :dependencies [[mvc-works/hsl "0.1.2"]]
+ :dependencies []
  :dev-http {8080 "target/"}
  :builds {:browser {:target :browser
                     :output-dir "target/browser"
                     :modules {:main {:init-fn app.main/main!}}
 
+                    ; configure devtools to have hot code swapping
                     :devtools {:after-load app.main/reload!}}}}
 ```
 
@@ -149,6 +150,39 @@ After compilation, two files will be generated in `dist/` with names:
 ```
 =>> l dist/
 assets.edn        main.9683CD2F.js
+```
+
+### Embedding in the JS Ecosystem — The :npm-module Target
+
+There is an additional target that is intended to help you use shadow-cljs as part of a project and provide seamless integration with existing JS tools (eg. webpack, browserify, babel, create-react-app, …​) with as little configuration as possible.
+
+Sample source `for src/main/demo/foo.cljs`
+
+```clojure
+(ns demo.foo)
+
+(defn hello [who]
+  (str "Hello, " who "!"))
+```
+
+Compile code to [`:npm-module` target](https://shadow-cljs.github.io/docs/UsersGuide.html#target-npm-module)
+
+```clojure
+{
+ ; ...
+ :builds {:npm {:target :npm-module
+                ; ...
+                }}}
+```
+
+The generated exports will be named `shadow-cljs/` with the CLJS namespace.
+
+```
+$ node
+> var x = require("shadow-cljs/demo.foo");
+undefined
+> x.hello("JS")
+'Hello, JS!'
 ```
 
 ### Other features

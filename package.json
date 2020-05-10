@@ -9,7 +9,6 @@
     "build": "shadow-cljs clj-run build.main/build",
     "page": "shadow-cljs clj-run build.main/page",
     "up": "yarn build-cdn && tiye-up",
-    "serve": "http-server dist -s",
     "repl": "rlwrap shadow-cljs clj-repl",
     "ln": "cd target && rm -f entry && ln -s ../entry"
   },
@@ -20,8 +19,7 @@
   "author": "jiyinyiyong",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.12.3",
-    "shadow-cljs": "^2.8.110"
+    "shadow-cljs": "^2.9.0"
   },
   "dependencies": {
     "highlight.js": "^10.0.2",

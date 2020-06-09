@@ -441,21 +441,21 @@
                           |kr $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1551203633346) (:id |v7sXT5WM-)
                             :data $ {}
                               |T $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1551203637013) (:text |comp-post) (:id |v7sXT5WM-leaf)
-                              |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042480850) (:text "|\"2020-05-08") (:id |qLBN-yu_G)
-                              |r $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042486034) (:text "|\"How about webpack now?") (:id |4OhVKc7zF)
-                              |v $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042491095) (:text "|\"https://code.thheller.com/blog/shadow-cljs/2020/05/08/how-about-webpack-now.html") (:id |BvcAAf1z3F)
-                          |kr5 $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1551203633346) (:id |mjjqdN8n_)
-                            :data $ {}
-                              |T $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1551203637013) (:text |comp-post) (:id |v7sXT5WM-leaf)
-                              |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1566838901962) (:text "|\"2019-08-25") (:id |qLBN-yu_G)
-                              |r $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1566838896571) (:text "|\"Hot Reload in ClojureScript") (:id |4OhVKc7zF)
-                              |v $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1566838885775) (:text "|\"https://code.thheller.com/blog/shadow-cljs/2019/08/25/hot-reload-in-clojurescript.html") (:id |BvcAAf1z3F)
+                              |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1591719974607) (:text "|\"2020-06-09") (:id |qLBN-yu_G)
+                              |r $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1591719956715) (:text "|\"Status Update - Inspect, cljs_eval") (:id |4OhVKc7zF)
+                              |v $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1591719961783) (:text "|\"https://clojureverse.org/t/status-update-inspect-cljs-eval/6074") (:id |BvcAAf1z3F)
                           |kr1 $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1551203633346) (:id |POmE0O3qd)
                             :data $ {}
                               |T $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1551203637013) (:text |comp-post) (:id |v7sXT5WM-leaf)
                               |j $ {} (:type :leaf) (:by |root) (:at 1571976930177) (:text "|\"2019-10-24") (:id |qLBN-yu_G)
                               |r $ {} (:type :leaf) (:by |root) (:at 1571976917721) (:text "|\"Introducing shadow-cljs Inspect") (:id |4OhVKc7zF)
                               |v $ {} (:type :leaf) (:by |root) (:at 1571976906183) (:text "|\"https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012") (:id |BvcAAf1z3F)
+                          |kr/ $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1551203633346) (:id |fpO7UoISF1)
+                            :data $ {}
+                              |T $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1551203637013) (:text |comp-post) (:id |v7sXT5WM-leaf)
+                              |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042480850) (:text "|\"2020-05-08") (:id |qLBN-yu_G)
+                              |r $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042486034) (:text "|\"How about webpack now?") (:id |4OhVKc7zF)
+                              |v $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1589042491095) (:text "|\"https://code.thheller.com/blog/shadow-cljs/2020/05/08/how-about-webpack-now.html") (:id |BvcAAf1z3F)
                   |n $ {} (:type :expr) (:by |root) (:at 1520739935757) (:id |SJ_DLXftM)
                     :data $ {}
                       |T $ {} (:type :leaf) (:by |root) (:at 1520783905566) (:text |comp-md-block) (:id |SJ_DLXftMleaf)

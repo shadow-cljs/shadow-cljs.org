@@ -41,17 +41,17 @@
     (div
      {:style {:padding-top 12, :padding-left 12}}
      (comp-post
+      "2020-06-09"
+      "Status Update - Inspect, cljs_eval"
+      "https://clojureverse.org/t/status-update-inspect-cljs-eval/6074")
+     (comp-post
       "2020-05-08"
       "How about webpack now?"
       "https://code.thheller.com/blog/shadow-cljs/2020/05/08/how-about-webpack-now.html")
      (comp-post
       "2019-10-24"
       "Introducing shadow-cljs Inspect"
-      "https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012")
-     (comp-post
-      "2019-08-25"
-      "Hot Reload in ClojureScript"
-      "https://code.thheller.com/blog/shadow-cljs/2019/08/25/hot-reload-in-clojurescript.html")))
+      "https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012")))
    (comp-md-block
     (inline "introduction.md")
     {:highlight (fn [code lang] (.-value (.highlight hljs lang code)))})))

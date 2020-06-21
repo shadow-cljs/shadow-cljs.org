@@ -97,21 +97,21 @@ With shadow-cljs, most npm modules for browser can be imported with modules inst
 
 Read more at [Guide on how to use/import npm modules/packages in ClojureScript?](https://clojureverse.org/t/guide-on-how-to-use-import-npm-modules-packages-in-clojurescript/2298)
 
-### Hot code swapping
+### Lifecycle Hooks
 
-shadow-cljs watches for file changes and re-compiles code incrementally. Warnings and errors are displayed after being prettified.
+You can configure the compiler to run functions just before hot code reload brings in updated code, and just after. These are useful for stopping/starting things that would otherwise close over old code.
 
 ```clojure
-{:source-paths ["src"]
- :dependencies []
- :dev-http {8080 "target/"}
- :builds {:browser {:target :browser
-                    :output-dir "target/browser"
-                    :modules {:main {:init-fn app.main/main!}}
+(ns my.app)
 
-                    ; configure devtools to have hot code swapping
-                    :devtools {:after-load app.main/reload!}}}}
+(defn ^:dev/before-load stop []
+  (js/console.log "stop"))
+
+(defn ^:dev/after-load start []
+  (js/console.log "start"))
 ```
+
+Find more [configs in user manual](https://shadow-cljs.github.io/docs/UsersGuide.html#_lifecycle_hooks).
 
 ### Non-code resources
 

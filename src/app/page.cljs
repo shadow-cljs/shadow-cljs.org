@@ -19,7 +19,7 @@
    (merge
     base-info
     {:styles [(<< "http://~(get-ip!):8100/main-fonts.css") "/entry/main.css"],
-     :scripts ["/client.js"],
+     :scripts [{:type :script, :src "/client.js", :defer? true}],
      :inline-styles [(slurp "./node_modules/highlight.js/styles/github-gist.css")]})))
 
 (defn prod-page []
@@ -33,7 +33,9 @@
      (merge
       base-info
       {:styles [(:release-ui config/site)],
-       :scripts (map #(-> % :output-name prefix-cdn) assets),
+       :scripts (map
+                 (fn [x] {:type :script, :src (-> x :output-name prefix-cdn), :defer? true})
+                 assets),
        :ssr "respo-ssr",
        :inline-styles [(slurp "./node_modules/highlight.js/styles/github-gist.css")
                        (slurp "./entry/main.css")],

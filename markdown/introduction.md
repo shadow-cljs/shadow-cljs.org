@@ -152,7 +152,7 @@ After compilation, two files will be generated in `dist/` with names:
 assets.edn        main.9683CD2F.js
 ```
 
-### Embedding in the JS Ecosystem — The :npm-module Target
+### Embedding in the JS Ecosystem — The :npm-module and :esm Target
 
 There is an additional target that is intended to help you use shadow-cljs as part of a project and provide seamless integration with existing JS tools (eg. webpack, browserify, babel, create-react-app, …​) with as little configuration as possible.
 
@@ -183,6 +183,14 @@ $ node
 undefined
 > x.hello("JS")
 'Hello, JS!'
+```
+
+It is now also possible to generate “almost” standards-complient ESM output. It says “almost” because it is technically cheating in development. `release` builds are fully `:advanced` optimized and compliant as they don’t leak any globals or do any other kinds of eval tricks.
+
+The generated code can be loaded as a module. [Find out more about `:esm` target.](https://clojureverse.org/t/generating-es-modules-browser-deno/6116)
+
+```html
+<script type="module" src="/js/demo.js"></script>
 ```
 
 ### Other features

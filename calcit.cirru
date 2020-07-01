@@ -364,7 +364,7 @@
               |r $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1593362355345)
                 :data $ {}
                   |T $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1593362358798) (:text |css) (:id |BFf5DEGCw)
-                  |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1593362992590) (:text "|\"background-color: hsl(0, 0%, 100%, 0);\nborder: 1px solid hsl(0, 0%, 90%);\nborder-radius: 24px;\ncolor: hsl(0, 0%, 95%);\ncursor: pointer;\ndisplay: inline-block;\nfont-size: 20px;\nheight: 48px;\nline-height: 48px;\nmin-width: 80px;\noutline: none;\npadding: 0px 32px;\ntext-align: center;\nvertical-align: top;\ntransition-duration: 200ms;\nuser-select: none;\n\n&:hover {\ncolor: hsl(0, 0%, 100%);\nborder: 1px solid hsl(0, 0%, 100%);\nbackground-color: hsl(0, 0%, 100%, 0.05);\n}") (:id |VRLCfIyYP)
+                  |j $ {} (:type :leaf) (:by |rJG4IHzWf) (:at 1593447431827) (:text "|\"background-color: hsl(0, 0%, 100%, 0);\nborder: 1px solid hsl(0, 0%, 90%);\nborder-radius: 24px;\ncolor: hsl(0, 0%, 95%);\ncursor: pointer;\ndisplay: inline-block;\nfont-size: 20px;\nheight: 48px;\nline-height: 48px;\nmin-width: 80px;\noutline: none;\npadding: 0px 32px;\ntext-align: center;\nvertical-align: top;\ntransition-duration: 200ms;\nuser-select: none;\n\n&:hover {\ncolor: hsl(0, 0%, 100%);\nborder: 1px solid hsl(0, 0%, 100%);\nbackground-color: hsl(0, 0%, 100%, 0.05);\n}") (:id |VRLCfIyYP)
                 :id |ughksFcuuc
             :id |_XsiBdJaE6
           |style-brand $ {} (:type :expr) (:by |rJG4IHzWf) (:at 1593362837418)

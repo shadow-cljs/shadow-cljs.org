@@ -95,3 +95,38 @@ body * {
     overflow: hidden;
     transform: translateZ(0);
 }
+
+.large-button {
+  background-color: hsl(0, 0%, 100%, 0);
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 24px;
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  height: 48px;
+  line-height: 48px;
+  min-width: 80px;
+  outline: none;
+  padding: 0px 32px;
+  text-align: center;
+  vertical-align: top;
+  transition-duration: 200ms;
+  user-select: none;
+}
+
+.large-button:hover {
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 100%, 0.05);
+}
+
+
+.brand {
+  user-select: none;
+}
+
+.brand:hover {
+    color: hsl(60, 100%, 50%, 1);
+    text-shadow: 0 0 4px hsl(60, 100%, 50%, 0.5);
+}

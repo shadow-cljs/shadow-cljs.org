@@ -12,8 +12,7 @@
             [respo-md.comp.md :refer [comp-md-block]]
             ["highlight.js" :as hljs]
             [app.config :refer [dev?]]
-            [shadow.resource :refer [inline]]
-            ["emotion" :refer [css cx]]))
+            [shadow.resource :refer [inline]]))
 
 (defcomp comp-date (date) (<> date {:color (hsl 0 0 70), :font-family ui/font-fancy}))
 
@@ -101,20 +100,12 @@
      {:href "https://clojureverse.org/c/projects/shadow-cljs", :style {:color :white}}
      (<> "Forum")))))
 
-(def style-brand
-  (css
-   "user-select: none;\n\n&:hover {\n    color: hsl(60deg 100% 50%);\n    text-shadow: 0 0 4px hsl(60deg 100% 50%/50%);\n}"))
-
-(def style-button
-  (css
-   "background-color: hsl(0, 0%, 100%, 0);\nborder: 1px solid hsl(0, 0%, 90%);\nborder-radius: 24px;\ncolor: hsl(0, 0%, 95%);\ncursor: pointer;\ndisplay: inline-block;\nfont-size: 20px;\nheight: 48px;\nline-height: 48px;\nmin-width: 80px;\noutline: none;\npadding: 0px 32px;\ntext-align: center;\nvertical-align: top;\ntransition-duration: 200ms;\nuser-select: none;\n\n&:hover {\ncolor: hsl(0, 0%, 100%);\nborder: 1px solid hsl(0, 0%, 100%);\nbackground-color: hsl(0, 0%, 100%, 0.05);\n}"))
-
 (defn render-visual []
   (div
    {:style (merge ui/center {:background-color theme/dark, :height 600, :color :white})}
    (div
     {:style {:font-size 64, :padding "0 16px", :font-family ui/font-fancy, :font-weight 100},
-     :class-name style-brand}
+     :class-name "brand"}
     (<> "shadow-cljs"))
    (div
     {:style {:font-size 18,
@@ -172,20 +163,20 @@
     (a
      {:href "https://shadow-cljs.github.io/docs/UsersGuide.html", :target "_blank"}
      (button
-      {:style {:font-family ui/font-fancy}, :class-name style-button}
+      {:style {:font-family ui/font-fancy}, :class-name "large-button"}
       (<> "User Manual")))
     (=< 32 nil)
     (a
      {:href "https://github.com/thheller/shadow-cljs/issues", :target "_blank"}
      (button
-      {:style {:font-family ui/font-fancy}, :class-name style-button}
+      {:style {:font-family ui/font-fancy}, :class-name "large-button"}
       (<> "Feedback")))
     (=< 32 nil)
     (a
      {:href "https://medium.com/@jiyinyiyong/a-beginner-guide-to-compile-clojurescript-with-shadow-cljs-26369190b786",
       :target "_blank"}
      (button
-      {:style {:font-family ui/font-fancy}, :class-name style-button}
+      {:style {:font-family ui/font-fancy}, :class-name "large-button"}
       (<> "Beginner"))))))
 
 (defcomp

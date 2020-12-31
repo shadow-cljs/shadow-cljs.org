@@ -2,9 +2,9 @@
 shadow-cljs.org
 ----
 
-> Home page for [shadow-cljs](github.com/thheller/shadow-cljs)
+> (Previous) intro page for [shadow-cljs](github.com/thheller/shadow-cljs).
 
-http://shadow-cljs.org
+Backup page http://r.tiye.me/shadow-cljs/shadow-cljs.org/
 
 Content mainly in markdown file [markdown/introduction.md](markdown/introduction.md). Fork, edit, and send PR if you'd like to help.
 
